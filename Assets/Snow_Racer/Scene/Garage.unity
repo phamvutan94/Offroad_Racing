@@ -541,6 +541,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 980737613451738343, guid: ebd460860e7235b479c324b3276c6230, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 980737613451738343, guid: ebd460860e7235b479c324b3276c6230, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 741232363}
+    - target: {fileID: 980737613451738343, guid: ebd460860e7235b479c324b3276c6230, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Select
+      objectReference: {fileID: 0}
+    - target: {fileID: 980737613451738343, guid: ebd460860e7235b479c324b3276c6230, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: RaceUI.LevelSelector, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 980737613451738343, guid: ebd460860e7235b479c324b3276c6230, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 1238833759126150676, guid: ebd460860e7235b479c324b3276c6230, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
@@ -628,6 +648,26 @@ PrefabInstance:
     - target: {fileID: 3496261087400842947, guid: ebd460860e7235b479c324b3276c6230, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: RaceUI.UIComingSoon, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829876935029651385, guid: ebd460860e7235b479c324b3276c6230, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829876935029651385, guid: ebd460860e7235b479c324b3276c6230, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 741232363}
+    - target: {fileID: 4829876935029651385, guid: ebd460860e7235b479c324b3276c6230, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Select
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829876935029651385, guid: ebd460860e7235b479c324b3276c6230, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: RaceUI.LevelSelector, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829876935029651385, guid: ebd460860e7235b479c324b3276c6230, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4903160520382674315, guid: ebd460860e7235b479c324b3276c6230, type: 3}
       propertyPath: m_IsActive
@@ -744,6 +784,46 @@ PrefabInstance:
     - target: {fileID: 8232596854482066931, guid: ebd460860e7235b479c324b3276c6230, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8582772122205791400, guid: ebd460860e7235b479c324b3276c6230, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8582772122205791400, guid: ebd460860e7235b479c324b3276c6230, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 741232363}
+    - target: {fileID: 8582772122205791400, guid: ebd460860e7235b479c324b3276c6230, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Select
+      objectReference: {fileID: 0}
+    - target: {fileID: 8582772122205791400, guid: ebd460860e7235b479c324b3276c6230, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: RaceUI.LevelSelector, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8582772122205791400, guid: ebd460860e7235b479c324b3276c6230, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601929972753102400, guid: ebd460860e7235b479c324b3276c6230, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601929972753102400, guid: ebd460860e7235b479c324b3276c6230, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 741232363}
+    - target: {fileID: 8601929972753102400, guid: ebd460860e7235b479c324b3276c6230, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Select
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601929972753102400, guid: ebd460860e7235b479c324b3276c6230, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: RaceUI.LevelSelector, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601929972753102400, guid: ebd460860e7235b479c324b3276c6230, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -874,6 +954,50 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 393501b8809fda141b63da3862eddd08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &190293754 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2167321041336282767, guid: ebd460860e7235b479c324b3276c6230, type: 3}
+  m_PrefabInstance: {fileID: 178088680}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8b83e9410dc7e14593b09cbf653fac0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &190293755 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8297553669068431134, guid: ebd460860e7235b479c324b3276c6230, type: 3}
+  m_PrefabInstance: {fileID: 178088680}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8b83e9410dc7e14593b09cbf653fac0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &190293756 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 518320193694410904, guid: ebd460860e7235b479c324b3276c6230, type: 3}
+  m_PrefabInstance: {fileID: 178088680}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8b83e9410dc7e14593b09cbf653fac0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &190293757 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2489916377299881511, guid: ebd460860e7235b479c324b3276c6230, type: 3}
+  m_PrefabInstance: {fileID: 178088680}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8b83e9410dc7e14593b09cbf653fac0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &217941952
@@ -1198,7 +1322,11 @@ MonoBehaviour:
   - Race_Track_5
   - Race_Track_6
   - Race_Track_7
-  prices: 00000000e8030000d0070000b80b0000a00f00008813000070170000
+  - Race_Track_8
+  - Race_Track_9
+  - Race_Track_10
+  - Race_Track_11
+  prices: 00000000e8030000d0070000b80b0000a00f00008813000070170000581b0000401f00002823000010270000
   titles:
   - TRACK 1
   - TRACK 2
@@ -1207,6 +1335,10 @@ MonoBehaviour:
   - RIVER STORM
   - SNOW TRAIL
   - BLIZZARD TRAIL
+  - PINE VALLEY
+  - PINE STORM
+  - PINE TRAIL
+  - PINE BLIZZARD
   subtitles:
   - CIRCUIT  /  2 LAPS
   - CIRCUIT  /  2 LAPS
@@ -1215,6 +1347,10 @@ MonoBehaviour:
   - REVERSE / RAIN / 1 LAP
   - OFFROAD / 2 LAPS
   - REVERSE / SNOWSTORM / 2 LAPS
+  - MOUNTAIN ROAD / 1 LAP
+  - REVERSE / RAIN / 1 LAP
+  - OFFROAD / 1 LAP
+  - REVERSE / SNOWSTORM / 1 LAP
   thumbnails:
   - {fileID: 21300000, guid: 3d8aa3c25bc5707419c27b2fecff70c4, type: 3}
   - {fileID: 21300000, guid: ea950e80c482b6042ae8fb583d0c2ea4, type: 3}
@@ -1223,6 +1359,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: d484870bc32102741af7e5c2c97de3e3, type: 3}
   - {fileID: 21300000, guid: 66a38b4c409e4954f9be92bac4cfa085, type: 3}
   - {fileID: 21300000, guid: 39e482c1a927d924ca2c0b86e004b1c4, type: 3}
+  - {fileID: 21300000, guid: 84f48a11029c9c64daf4f38b3b531f75, type: 3}
+  - {fileID: 21300000, guid: 258080b13aa4c01469c89d00c9230bee, type: 3}
+  - {fileID: 21300000, guid: 4984f3f88bcd9f849842772cceb593f8, type: 3}
+  - {fileID: 21300000, guid: a9bdfc70434454846a6168284a10d9ab, type: 3}
   titleArts:
   - {fileID: 0}
   - {fileID: 0}
@@ -1231,6 +1371,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 754b07ca4334e11498d00fb92d848e98, type: 3}
   - {fileID: 21300000, guid: acece443e73ea34419fcdfcd9ebd732e, type: 3}
   - {fileID: 21300000, guid: f5a8093efc298fe40960585f7f9a0076, type: 3}
+  - {fileID: 21300000, guid: 5513b716ff22f504a94c4f6c6eb059f5, type: 3}
+  - {fileID: 21300000, guid: 4feeb201ba77c8547b3d66d00b300ee8, type: 3}
+  - {fileID: 21300000, guid: d78a0ca3790470947aac5c18c223b8f5, type: 3}
+  - {fileID: 21300000, guid: 51bf8c9357ae8014489791417620436b, type: 3}
   podiumRewards: b80b0000d0070000e8030000
   cards:
   - {fileID: 178088691}
@@ -1240,6 +1384,10 @@ MonoBehaviour:
   - {fileID: 1580523842}
   - {fileID: 1580523841}
   - {fileID: 1580523840}
+  - {fileID: 190293757}
+  - {fileID: 190293756}
+  - {fileID: 190293755}
+  - {fileID: 190293754}
   detailNumber: {fileID: 178088688}
   detailTitle: {fileID: 178088687}
   detailSubtitle: {fileID: 178088686}

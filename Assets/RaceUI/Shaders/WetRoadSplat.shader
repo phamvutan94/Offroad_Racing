@@ -9,6 +9,7 @@ Shader "RaceUI/Wet Road Splat" {
 		[Gamma]_Metallic0("Metallic 0", Range(0.0, 1.0)) = 0.0
 		[Gamma]_Metallic1("Metallic 1", Range(0.0, 1.0)) = 0.0
 		_Glossiness("Dry smoothness", Range(0,1)) = 0.5
+		[Toggle] _UseVertexColors("Blend layers by vertex colour (off = all layer 0)", Float) = 1
 
 		[Header(Wet)]
 		_Wetness("Wetness", Range(0,1)) = 1
@@ -39,7 +40,7 @@ Shader "RaceUI/Wet Road Splat" {
 
 		sampler2D _Splat0, _Splat1, _Normal0, _Normal1, _PuddleMask;
 		float4 _Splat0_ST, _Splat1_ST;
-		half _Metallic0, _Metallic1, _Glossiness;
+		half _Metallic0, _Metallic1, _Glossiness, _UseVertexColors;
 		half _Wetness, _WetDarken, _WetSmoothness, _SnowWetness;
 		float _PuddleScale; half _PuddleCoverage, _PuddleEdge, _PuddleSmoothness; fixed4 _PuddleColor;
 		half _RippleStrength; float _RippleScale, _RippleSpeed;
@@ -72,7 +73,8 @@ Shader "RaceUI/Wet Road Splat" {
 		}
 
 		void surf(Input IN, inout SurfaceOutputStandard o) {
-			half asphalt = IN.color.r, snow = IN.color.g;
+			half2 w = lerp(half2(1, 0), IN.color.rg, _UseVertexColors); // meshes without vertex colours are plain asphalt
+			half asphalt = w.x, snow = w.y;
 			fixed4 col = asphalt * tex2D(_Splat0, IN.coord0.xy) + snow * tex2D(_Splat1, IN.coord0.zw);
 			fixed4 nrm = asphalt * tex2D(_Normal0, IN.coord0.xy) + snow * tex2D(_Normal1, IN.coord0.zw);
 			float3 n = UnpackNormal(nrm);
@@ -90,7 +92,7 @@ Shader "RaceUI/Wet Road Splat" {
 			o.Albedo = lerp(o.Albedo, o.Albedo * _PuddleColor.rgb, puddle);
 			o.Normal = normalize(lerp(lerp(n, float3(0, 0, 1), wet * 0.4), puddleN, puddle));
 			o.Smoothness = lerp(lerp(_Glossiness, _WetSmoothness, wet), _PuddleSmoothness, puddle);
-			o.Metallic = dot(IN.color.rg, half2(_Metallic0, _Metallic1)) * (1.0 - puddle);
+			o.Metallic = dot(w, half2(_Metallic0, _Metallic1)) * (1.0 - puddle);
 			o.Alpha = 1;
 		}
 		ENDCG

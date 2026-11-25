@@ -77,6 +77,15 @@ namespace RaceUI
             float shownAt = Time.unscaledTime;
 
             AsyncOperation op = SceneManager.LoadSceneAsync(sceneName);
+            if (op == null)
+            {
+                // Scene missing from the build profile: hide the screen again instead of staying stuck in IsLoading.
+                Debug.LogError("[SceneLoadingService] Cannot load scene '" + sceneName + "' (not in the build profile?)");
+                yield return Fade(1f, 0f);
+                group.blocksRaycasts = false;
+                IsLoading = false;
+                yield break;
+            }
             op.allowSceneActivation = false;
             // Fake progress: eases towards 95% over minimumShowTime, never ahead of the real load,
             // then glides to 100% once the scene is ready and the minimum time has passed.
