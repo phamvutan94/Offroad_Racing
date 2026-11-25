@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: RT_Road_A_Wet
+  m_Shader: {fileID: 4800000, guid: c626d2c2ee84bcb47827a5db469e0478, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Normal0:
+        m_Texture: {fileID: 2800000, guid: eb8a15a56c0a442848b87c985779a49e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Normal1:
+        m_Texture: {fileID: 2800000, guid: eb8a15a56c0a442848b87c985779a49e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _PuddleMask:
+        m_Texture: {fileID: 2800000, guid: 8650c1f4fa65fae4c87dfd0818686995, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Splat0:
+        m_Texture: {fileID: 2800000, guid: 01829d7b363994191a7b60cd8d6bd526, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Splat1:
+        m_Texture: {fileID: 2800000, guid: e240217fa4ee9416fb1c00baa6d02381, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Glossiness: 0.5
+    - _Metallic0: 0.18299997
+    - _Metallic1: 0
+    - _PuddleCoverage: 0.45
+    - _PuddleEdge: 0.06
+    - _PuddleScale: 0.06
+    - _PuddleSmoothness: 0.98
+    - _RippleScale: 0.5
+    - _RippleSpeed: 1.3
+    - _RippleStrength: 0.28
+    - _SnowWetness: 0.25
+    - _WetDarken: 0.5
+    - _WetSmoothness: 0.82
+    - _Wetness: 1
+    m_Colors:
+    - _PuddleColor: {r: 0.34, g: 0.37, b: 0.42, a: 1}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
