@@ -441,6 +441,26 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 195158421209901575, guid: ebd460860e7235b479c324b3276c6230, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 195158421209901575, guid: ebd460860e7235b479c324b3276c6230, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 741232363}
+    - target: {fileID: 195158421209901575, guid: ebd460860e7235b479c324b3276c6230, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Select
+      objectReference: {fileID: 0}
+    - target: {fileID: 195158421209901575, guid: ebd460860e7235b479c324b3276c6230, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: RaceUI.LevelSelector, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 195158421209901575, guid: ebd460860e7235b479c324b3276c6230, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 359466718961805034, guid: ebd460860e7235b479c324b3276c6230, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 3
@@ -608,6 +628,26 @@ PrefabInstance:
     - target: {fileID: 1370230256641474913, guid: ebd460860e7235b479c324b3276c6230, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2999719282771028776, guid: ebd460860e7235b479c324b3276c6230, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2999719282771028776, guid: ebd460860e7235b479c324b3276c6230, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 741232363}
+    - target: {fileID: 2999719282771028776, guid: ebd460860e7235b479c324b3276c6230, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Select
+      objectReference: {fileID: 0}
+    - target: {fileID: 2999719282771028776, guid: ebd460860e7235b479c324b3276c6230, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: RaceUI.LevelSelector, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2999719282771028776, guid: ebd460860e7235b479c324b3276c6230, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 3018003876950091466, guid: ebd460860e7235b479c324b3276c6230, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -1326,7 +1366,9 @@ MonoBehaviour:
   - Race_Track_9
   - Race_Track_10
   - Race_Track_11
-  prices: 00000000e8030000d0070000b80b0000a00f00008813000070170000581b0000401f00002823000010270000
+  - Race_Track_12
+  - Race_Track_13
+  prices: 00000000e8030000d0070000b80b0000a00f00008813000070170000581b0000401f00002823000010270000f82a0000e02e0000
   titles:
   - TRACK 1
   - TRACK 2
@@ -1339,6 +1381,8 @@ MonoBehaviour:
   - PINE STORM
   - PINE TRAIL
   - PINE BLIZZARD
+  - FROST ISLAND
+  - ICE STORM
   subtitles:
   - CIRCUIT  /  2 LAPS
   - CIRCUIT  /  2 LAPS
@@ -1351,6 +1395,8 @@ MonoBehaviour:
   - REVERSE / RAIN / 1 LAP
   - OFFROAD / 1 LAP
   - REVERSE / SNOWSTORM / 1 LAP
+  - OFFROAD / 3 LAPS
+  - REVERSE / SNOWSTORM / 3 LAPS
   thumbnails:
   - {fileID: 21300000, guid: 3d8aa3c25bc5707419c27b2fecff70c4, type: 3}
   - {fileID: 21300000, guid: ea950e80c482b6042ae8fb583d0c2ea4, type: 3}
@@ -1363,6 +1409,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 258080b13aa4c01469c89d00c9230bee, type: 3}
   - {fileID: 21300000, guid: 4984f3f88bcd9f849842772cceb593f8, type: 3}
   - {fileID: 21300000, guid: a9bdfc70434454846a6168284a10d9ab, type: 3}
+  - {fileID: 21300000, guid: c7ae8aa4f1336e742a54dbc1a13c262f, type: 3}
+  - {fileID: 21300000, guid: 34d2c6f342725e643905ea1d108d3321, type: 3}
   titleArts:
   - {fileID: 0}
   - {fileID: 0}
@@ -1375,6 +1423,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 4feeb201ba77c8547b3d66d00b300ee8, type: 3}
   - {fileID: 21300000, guid: d78a0ca3790470947aac5c18c223b8f5, type: 3}
   - {fileID: 21300000, guid: 51bf8c9357ae8014489791417620436b, type: 3}
+  - {fileID: 21300000, guid: abe227019e9285a4ca36bd86b4a5b236, type: 3}
+  - {fileID: 21300000, guid: d1175cf986b4dad44983351cd10f31bb, type: 3}
   podiumRewards: b80b0000d0070000e8030000
   cards:
   - {fileID: 178088691}
@@ -1388,6 +1438,8 @@ MonoBehaviour:
   - {fileID: 190293756}
   - {fileID: 190293755}
   - {fileID: 190293754}
+  - {fileID: 1030304414}
+  - {fileID: 1030304413}
   detailNumber: {fileID: 178088688}
   detailTitle: {fileID: 178088687}
   detailSubtitle: {fileID: 178088686}
@@ -2307,6 +2359,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 900652fc5e43a4a4191fa17862b3dc3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1030304413 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8925828145441370256, guid: ebd460860e7235b479c324b3276c6230, type: 3}
+  m_PrefabInstance: {fileID: 178088680}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8b83e9410dc7e14593b09cbf653fac0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1030304414 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 100267729275068046, guid: ebd460860e7235b479c324b3276c6230, type: 3}
+  m_PrefabInstance: {fileID: 178088680}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8b83e9410dc7e14593b09cbf653fac0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1155805650
 GameObject:
   m_ObjectHideFlags: 0
@@ -2339,8 +2413,8 @@ RectTransform:
   - {fileID: 442727794}
   m_Father: {fileID: 610052652}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.051003344, y: 0.048148148}
-  m_AnchorMax: {x: 0.9498328, y: 1}
+  m_AnchorMin: {x: 0.05075594, y: 0.049065422}
+  m_AnchorMax: {x: 0.9492441, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}

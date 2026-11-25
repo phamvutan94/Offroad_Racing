@@ -18,6 +18,8 @@ namespace ALIyerEdon
 		public float steerSensibility = 20f;
 
 		public bool canRespawn = true;
+		[Tooltip("Respawn on the last waypoint when slower than this (km/h) for 4 seconds; was 7, which missed cars spinning their wheels against a wall")]
+		public float respawnSpeed = 12f;
 
 		[Space(10)]
 		[Header("Waypoint System___________________________________________")]
@@ -352,7 +354,7 @@ namespace ALIyerEdon
 		{
 			if (canReverseCheck)
 			{
-				if (carSpeed <= 7f)
+				if (carSpeed <= respawnSpeed)
 				{
 					if (!respawnCheking)
 						StartCoroutine(Check_Respawn());
@@ -367,7 +369,7 @@ namespace ALIyerEdon
 			//_________________________________111
 			yield return new WaitForSeconds(Time.timeScale);
 
-			if (carSpeed <= 7f)
+			if (carSpeed <= respawnSpeed)
 				respawnCheck_1 = true;
 			else
 			{
@@ -383,7 +385,7 @@ namespace ALIyerEdon
 			//_________________________________222
 			yield return new WaitForSeconds(Time.timeScale);
 
-			if (carSpeed <= 7f)
+			if (carSpeed <= respawnSpeed)
 				respawnCheck_2 = true;
 			else
 			{
@@ -399,7 +401,7 @@ namespace ALIyerEdon
 			//_________________________________333
 			yield return new WaitForSeconds(Time.timeScale);
 
-			if (carSpeed <= 7f)
+			if (carSpeed <= respawnSpeed)
 				respawnCheck_3 = true;
 			else
 			{
@@ -415,7 +417,7 @@ namespace ALIyerEdon
 			//_________________________________444
 			yield return new WaitForSeconds(Time.timeScale);
 
-			if (carSpeed <= 7f)
+			if (carSpeed <= respawnSpeed)
 				respawnCheck_4 = true;
 			else
 			{

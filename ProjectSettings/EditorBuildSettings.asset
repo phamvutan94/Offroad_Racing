@@ -44,5 +44,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Snow_Racer/Scene/Race_Track_11.unity
     guid: 99d75c3936dd3e54da053c64c1a175ec
+  - enabled: 1
+    path: Assets/Snow_Racer/Scene/Race_Track_12.unity
+    guid: 90e181f27ccf29744bb36071e67cdb59
+  - enabled: 1
+    path: Assets/Snow_Racer/Scene/Race_Track_13.unity
+    guid: a0db2ea72ee8b324c850148d72cf5c9d
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
