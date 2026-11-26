@@ -9,7 +9,7 @@ namespace RaceUI
     /// (camera orbit) and the click is cancelled.
     /// </summary>
     public sealed class SwipePassThrough : MonoBehaviour,
-        IPointerDownHandler, IPointerUpHandler, IBeginDragHandler, IDragHandler, IEndDragHandler
+        IPointerDownHandler, IPointerUpHandler, IBeginDragHandler, IDragHandler, IEndDragHandler, IScrollHandler
     {
         [SerializeField] private SwipeArea swipeArea;
 
@@ -35,5 +35,10 @@ namespace RaceUI
         }
 
         public void OnEndDrag(PointerEventData e) { }
+
+        public void OnScroll(PointerEventData e)
+        {
+            if (swipeArea != null) swipeArea.OnScroll(e);
+        }
     }
 }

@@ -11,8 +11,13 @@ namespace RaceUI
     /// Deltas are normalised by screen height so sensitivity is the same on every device.
     /// </summary>
     [RequireComponent(typeof(Graphic))]
-    public sealed class SwipeArea : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDragHandler
+    public sealed class SwipeArea : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDragHandler, IScrollHandler
     {
+        [Tooltip("Pinch amount (screen heights) per mouse-wheel notch; positive = wheel up zooms in")]
+        [SerializeField] private float wheelZoomPerNotch = 0.05f;
+        [Tooltip("Scroll delta the UI input module reports for one wheel notch (InputSystemUIInputModule > Scroll Delta Per Tick)")]
+        [SerializeField, Min(0.01f)] private float scrollUnitsPerNotch = 6f;
+
         private readonly Dictionary<int, Vector2> pointers = new Dictionary<int, Vector2>();
         private Vector2 dragDelta;
         private float pinchDelta;
@@ -51,6 +56,13 @@ namespace RaceUI
                 dragDelta += e.delta * scale;
             }
             pointers[e.pointerId] = e.position;
+            LastInputTime = Time.unscaledTime;
+        }
+
+        // mouse wheel (editor / desktop): counts as a pinch, wheel up = fingers apart = closer
+        public void OnScroll(PointerEventData e)
+        {
+            pinchDelta += e.scrollDelta.y / scrollUnitsPerNotch * wheelZoomPerNotch;
             LastInputTime = Time.unscaledTime;
         }
 
