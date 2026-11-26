@@ -17,10 +17,11 @@ namespace RaceUI
         [SerializeField] private int[] carPrices;
         [SerializeField] private string[] carNames;
 
-        [Header("Stat bar reference maximums")]
-        [SerializeField] private float maxSpeedReference = 200f;
-        [SerializeField] private float enginePowerReference = 1500f;
-        [SerializeField] private float steerReference = 45f;
+        [Header("Performance bars (stats from the tuning config, upgrades included)")]
+        [SerializeField] private TuningConfig tuning;
+        [Tooltip("Stat value (0..10) shown as an empty / full bar; a narrow range makes the differences between cars visible")]
+        [SerializeField] private float statEmpty = 3f;
+        [SerializeField] private float statFull = 9f;
 
         [Header("UI")]
         [SerializeField] private Text[] nameLabels;
@@ -32,7 +33,8 @@ namespace RaceUI
         [SerializeField] private StatBar speedBar;
         [SerializeField] private StatBar accelerationBar;
         [SerializeField] private StatBar handlingBar;
-        [SerializeField] private StatBar nitroBar;
+        [UnityEngine.Serialization.FormerlySerializedAs("nitroBar")]
+        [SerializeField] private StatBar offroadBar;
 
         [Header("Flow")]
         [SerializeField] private UIDialog dialog;
@@ -40,6 +42,7 @@ namespace RaceUI
 
         private int index;
         private GameObject spawnedCar;
+        private bool statsShown;
 
         public int Index => index;
         public string CarDisplayName => CarName(index);
@@ -48,6 +51,14 @@ namespace RaceUI
         {
             index = Mathf.Clamp(GameSave.SelectedCar, 0, carPrefabs.Length - 1);
             ShowCar();
+        }
+
+        private void OnEnable() => CarTuning.Changed += OnTuningChanged;
+        private void OnDisable() => CarTuning.Changed -= OnTuningChanged;
+
+        private void OnTuningChanged(int car)
+        {
+            if (car == index) RefreshStats();
         }
 
         public void Next() { index = (index + 1) % carPrefabs.Length; ShowCar(); }
@@ -96,18 +107,21 @@ namespace RaceUI
 
         private void RefreshStats()
         {
-            EasyCarController car = carPrefabs[index] != null ? carPrefabs[index].GetComponent<EasyCarController>() : null;
-            if (car == null) return;
-            Nitro_Feature nitro = car.GetComponent<Nitro_Feature>();
-            SetStat(speedBar, car.maxSpeed / maxSpeedReference);
-            SetStat(accelerationBar, car.enginePower / enginePowerReference);
-            SetStat(handlingBar, car.maxSteer / steerReference);
-            SetStat(nitroBar, nitro == null || !nitro.enableNitro ? 0f : ((int)nitro.nitroBoost + 1) / 3f);
+            if (tuning == null) return;
+            float[] stats = tuning.Stats(index, CarTuning.Levels(tuning, index));
+            SetStat(speedBar, stats[(int)TuningStat.Speed]);
+            SetStat(accelerationBar, stats[(int)TuningStat.Acceleration]);
+            SetStat(handlingBar, stats[(int)TuningStat.Handling]);
+            SetStat(offroadBar, stats[(int)TuningStat.Offroad]);
+            statsShown = true;
         }
 
-        private static void SetStat(StatBar bar, float value)
+        private void SetStat(StatBar bar, float stat)
         {
-            if (bar != null) bar.SetValue(Mathf.Clamp01(value));
+            if (bar == null) return;
+            float value = Mathf.Clamp01(Mathf.InverseLerp(statEmpty, statFull, stat));
+            // first fill jumps; switching cars or upgrading slides the bar
+            if (statsShown) bar.AnimateTo(value); else bar.SetValue(value);
         }
 
         private string CarName(int i) => i < carNames.Length && !string.IsNullOrEmpty(carNames[i]) ? carNames[i] : "CAR " + (i + 1);

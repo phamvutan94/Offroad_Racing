@@ -2256,7 +2256,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1381457315786007801, guid: 0f05241e2535f914fb43cfb9cef16d2d, type: 3}
       propertyPath: m_Text
-      value: NITRO
+      value: OFFROAD
       objectReference: {fileID: 0}
     - target: {fileID: 3589184551386483356, guid: 0f05241e2535f914fb43cfb9cef16d2d, type: 3}
       propertyPath: m_Text
@@ -2272,7 +2272,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8445058812877404694, guid: 0f05241e2535f914fb43cfb9cef16d2d, type: 3}
       propertyPath: m_Name
-      value: Stat_NITRO
+      value: Stat_OFFROAD
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

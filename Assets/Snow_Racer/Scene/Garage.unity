@@ -1694,9 +1694,9 @@ MonoBehaviour:
   - RIDGE HUNTER
   - TRAIL BREAKER
   - DUST COMET
-  maxSpeedReference: 200
-  enginePowerReference: 1500
-  steerReference: 45
+  tuning: {fileID: 11400000, guid: 7772835a5600ce442b9567b6e6d52aab, type: 2}
+  statEmpty: 3
+  statFull: 9
   nameLabels:
   - {fileID: 984929357}
   - {fileID: 1241602414}
@@ -1710,7 +1710,7 @@ MonoBehaviour:
   speedBar: {fileID: 1241602413}
   accelerationBar: {fileID: 1241602412}
   handlingBar: {fileID: 1241602411}
-  nitroBar: {fileID: 1241602410}
+  offroadBar: {fileID: 1241602410}
   dialog: {fileID: 166278828}
   levelSelector: {fileID: 741232363}
 --- !u!114 &741232365
