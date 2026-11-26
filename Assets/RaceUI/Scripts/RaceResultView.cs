@@ -46,6 +46,7 @@ namespace RaceUI
             GameSave.NotifyCoinsChanged();
             // the coins are already added; the garage shows the "coins received" popup for them
             GameSave.AddPendingReward(reward, GameSave.Ordinal(place) + " place in " + links.TrackTitle);
+            GameSave.RecordRaceResult(place);
 
             for (int i = 0; i < rowNames.Length; i++)
             {
