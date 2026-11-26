@@ -1518,6 +1518,7 @@ GameObject:
   - component: {fileID: 5395562785550002479}
   - component: {fileID: 8081521687252467869}
   - component: {fileID: 3690187381315334732}
+  - component: {fileID: 7007990064441707917}
   m_Layer: 3
   m_Name: Player_2
   m_TagString: Player
@@ -1745,6 +1746,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   steerSensibility: 10
   canRespawn: 1
+  respawnSpeed: 12
   pathName: Path_2
   remainingDistance: 22
   rayPosition: {fileID: 6004266937799785517}
@@ -1844,6 +1846,21 @@ MonoBehaviour:
   distance: 5.07
   height: 0.98
   heightOffset: 6.92
+--- !u!114 &7007990064441707917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2248334543200859818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e72943f02fae570459496653489aa785, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  config: {fileID: 11400000, guid: 7772835a5600ce442b9567b6e6d52aab, type: 2}
+  carIndex: 1
+  controller: {fileID: 1550756994139557575}
 --- !u!1 &2318821861543729918
 GameObject:
   m_ObjectHideFlags: 0

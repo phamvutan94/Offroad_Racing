@@ -29,6 +29,23 @@ namespace RaceUI
             return true;
         }
 
+        // Coins won somewhere else (race result) that the garage announces with the "coins received" popup.
+        public static int PendingReward => PlayerPrefs.GetInt("PendingReward", 0);
+        public static string PendingRewardSource => PlayerPrefs.GetString("PendingRewardSource", "");
+
+        public static void AddPendingReward(int coins, string source)
+        {
+            if (coins <= 0) return;
+            PlayerPrefs.SetInt("PendingReward", PendingReward + coins);
+            PlayerPrefs.SetString("PendingRewardSource", source);
+        }
+
+        public static void ClearPendingReward()
+        {
+            PlayerPrefs.DeleteKey("PendingReward");
+            PlayerPrefs.DeleteKey("PendingRewardSource");
+        }
+
         public static bool IsCarOwned(int index) => PlayerPrefs.GetInt("Car" + index) == Unlocked;
         public static void SetCarOwned(int index) => PlayerPrefs.SetInt("Car" + index, Unlocked);
 

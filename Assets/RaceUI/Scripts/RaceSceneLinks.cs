@@ -39,6 +39,7 @@ namespace RaceUI
         public Load_Settings LoadSettings => loadSettings;
         public Checkpoint_Manager CheckpointManager => checkpointManager;
         public Behaviour SunShaftEffect => sunShaftEffect;
+        public string TrackTitle => trackTitle;
 
         private void Start()
         {

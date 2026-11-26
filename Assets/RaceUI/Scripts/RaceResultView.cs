@@ -44,6 +44,8 @@ namespace RaceUI
             captionText.text = place == 0 ? "TRAIL CONQUERED" : place < 3 ? "ON THE PODIUM" : "KEEP PUSHING";
             rewardText.text = reward > 0 ? "+" + reward.ToString("N0") + " COINS" : "NO REWARD";
             GameSave.NotifyCoinsChanged();
+            // the coins are already added; the garage shows the "coins received" popup for them
+            GameSave.AddPendingReward(reward, GameSave.Ordinal(place) + " place in " + links.TrackTitle);
 
             for (int i = 0; i < rowNames.Length; i++)
             {

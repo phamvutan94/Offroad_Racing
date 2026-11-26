@@ -29711,6 +29711,7 @@ GameObject:
   - component: {fileID: 8258004814633035379}
   - component: {fileID: 5177446800455760675}
   - component: {fileID: 1500610953965063517}
+  - component: {fileID: 94892092155977447}
   m_Layer: 3
   m_Name: Player_4
   m_TagString: Player
@@ -29938,6 +29939,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   steerSensibility: 10
   canRespawn: 1
+  respawnSpeed: 12
   pathName: Path_4
   remainingDistance: 22
   rayPosition: {fileID: 3621345444639283067}
@@ -30022,6 +30024,21 @@ MonoBehaviour:
   - {fileID: 86907397118359386}
   Amount: 100
   raceIsStarted: 0
+--- !u!114 &94892092155977447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2955039213994686361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e72943f02fae570459496653489aa785, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  config: {fileID: 11400000, guid: 7772835a5600ce442b9567b6e6d52aab, type: 2}
+  carIndex: 3
+  controller: {fileID: 3621345443685259291}
 --- !u!1 &2955039213994704729
 GameObject:
   m_ObjectHideFlags: 0

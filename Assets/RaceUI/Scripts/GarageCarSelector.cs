@@ -42,6 +42,7 @@ namespace RaceUI
         private GameObject spawnedCar;
 
         public int Index => index;
+        public string CarDisplayName => CarName(index);
 
         private void Start()
         {

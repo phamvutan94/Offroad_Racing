@@ -1,0 +1,169 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d41403a55ed44742bad72420dac04c0, type: 3}
+  m_Name: TuningConfig
+  m_EditorClassIdentifier: 
+  levelPrices: f401000020030000b004000008070000280a0000100e000088130000
+  parts:
+  - id: engine
+    displayName: ENGINE
+    tierSprites:
+    - {fileID: 21300000, guid: 541dd0c115f22b34b9938ad8f447b091, type: 3}
+    - {fileID: 21300000, guid: 540d55cb24852b04ea9f5e33af802edd, type: 3}
+    - {fileID: 21300000, guid: 23eec9e8a51ab984ab957db7def4e54a, type: 3}
+    statPerLevel:
+    - 0.3
+    - 0.1
+    - 0
+    - 0
+    - 0.05
+    - 0.05
+    enginePower: 0.06
+    maxSpeed: 0
+    brakePower: 0
+    brakeFriction: 0
+    steerSensibility: 0
+    maxSteer: 0
+    handBrakeFriction: 0
+  - id: ecu
+    displayName: ECU
+    tierSprites:
+    - {fileID: 21300000, guid: ac638db5d2f67c742b4b00f79afb92f3, type: 3}
+    - {fileID: 21300000, guid: 7f910b5a8a3721447bad0fc1fec22dba, type: 3}
+    - {fileID: 21300000, guid: b97883dbe74fd8a449077a5cda04058c, type: 3}
+    statPerLevel:
+    - 0.1
+    - 0.3
+    - 0
+    - 0
+    - 0
+    - 0
+    enginePower: 0.02
+    maxSpeed: 0.03
+    brakePower: 0
+    brakeFriction: 0
+    steerSensibility: 0
+    maxSteer: 0
+    handBrakeFriction: 0
+  - id: brake
+    displayName: BRAKE
+    tierSprites:
+    - {fileID: 21300000, guid: aaf59acb78aa04c4a85fbd8149b9b582, type: 3}
+    - {fileID: 21300000, guid: 9e884cd7218ddfe4f9fae2e8ba37f68d, type: 3}
+    - {fileID: 21300000, guid: 55011e20d49e48345810d5f83e974647, type: 3}
+    statPerLevel:
+    - 0
+    - 0
+    - 0.05
+    - 0.35
+    - 0
+    - 0
+    enginePower: 0
+    maxSpeed: 0
+    brakePower: 0.08
+    brakeFriction: 0.04
+    steerSensibility: 0
+    maxSteer: 0
+    handBrakeFriction: 0
+  - id: suspension
+    displayName: SUSPENSION
+    tierSprites:
+    - {fileID: 21300000, guid: 34eb2924c7e955042979cc2bbc3475a4, type: 3}
+    - {fileID: 21300000, guid: d18a1d3a9a26909459ad0e4180edad73, type: 3}
+    - {fileID: 21300000, guid: 263f9c964b65787498a1a2b7c4c73103, type: 3}
+    statPerLevel:
+    - 0
+    - 0
+    - 0.2
+    - 0
+    - 0
+    - 0.3
+    enginePower: 0
+    maxSpeed: 0
+    brakePower: 0
+    brakeFriction: 0
+    steerSensibility: 0.04
+    maxSteer: 0
+    handBrakeFriction: 0
+  - id: differential
+    displayName: DIFFERENTIAL
+    tierSprites:
+    - {fileID: 21300000, guid: 93152d9e9300fb44f908337822860f01, type: 3}
+    - {fileID: 21300000, guid: eb6a711f1d4591e49927543c87b7b269, type: 3}
+    - {fileID: 21300000, guid: 9f0f3fa4017429a499cb882ced75114c, type: 3}
+    statPerLevel:
+    - 0.05
+    - 0
+    - 0.15
+    - 0
+    - 0.3
+    - 0
+    enginePower: 0
+    maxSpeed: 0
+    brakePower: 0
+    brakeFriction: 0
+    steerSensibility: 0
+    maxSteer: 0.015
+    handBrakeFriction: -0.04
+  - id: filter
+    displayName: FILTER
+    tierSprites:
+    - {fileID: 21300000, guid: 815ab8a110750ab4aa81d30e9df0f333, type: 3}
+    - {fileID: 21300000, guid: fe53c0facf009e744b4d26f50bea1e7c, type: 3}
+    - {fileID: 21300000, guid: 4f5a16abdc2735848929634c13b3ef12, type: 3}
+    statPerLevel:
+    - 0.15
+    - 0.15
+    - 0
+    - 0
+    - 0
+    - 0.05
+    enginePower: 0.03
+    maxSpeed: 0.015
+    brakePower: 0
+    brakeFriction: 0
+    steerSensibility: 0
+    maxSteer: 0
+    handBrakeFriction: 0
+  cars:
+  - stats:
+    - 6.1
+    - 5.5
+    - 6.1
+    - 5.7
+    - 5.8
+    - 5.1
+  - stats:
+    - 5.8
+    - 5.9
+    - 5.7
+    - 5.6
+    - 5.4
+    - 5.6
+  - stats:
+    - 5.6
+    - 5.4
+    - 6
+    - 6
+    - 6.2
+    - 5.3
+  - stats:
+    - 6.4
+    - 5.7
+    - 5.5
+    - 5.4
+    - 5.7
+    - 5
+  performanceScale: 15
+  classBAt: 600
+  classAAt: 700
+  classSAt: 800
