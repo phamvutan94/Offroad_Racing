@@ -24,12 +24,14 @@ namespace RaceUI
 
         public int MaxSize { get => maxSize; set { maxSize = value; Fit(true); } }
 
+#if UNITY_EDITOR
         protected override void Reset()
         {
             text = GetComponent<Text>();
             maxSize = text.fontSize;
             minSize = Mathf.Max(10, Mathf.RoundToInt(maxSize * 0.45f));
         }
+#endif
 
         protected override void OnEnable()
         {
