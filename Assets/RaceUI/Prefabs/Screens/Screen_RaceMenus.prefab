@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5651594074232451471}
   - component: {fileID: 511378978781943032}
   - component: {fileID: 8809958205770304257}
+  - component: {fileID: 5093253228196788100}
   m_Layer: 5
   m_Name: KeyHint
   m_TagString: Untagged
@@ -75,10 +76,25 @@ MonoBehaviour:
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: or press F
+--- !u!114 &5093253228196788100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 121565641347476161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037e87dba3524cf48b49153ddebdcf77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 8809958205770304257}
+  maxSize: 22
+  minSize: 10
 --- !u!1 &1275453136293110252
 GameObject:
   m_ObjectHideFlags: 0
@@ -90,6 +106,7 @@ GameObject:
   - component: {fileID: 8489466998350762107}
   - component: {fileID: 734047326018038607}
   - component: {fileID: 1417280211346141265}
+  - component: {fileID: 1998855378227900000}
   m_Layer: 5
   m_Name: Pos
   m_TagString: Untagged
@@ -154,10 +171,25 @@ MonoBehaviour:
     m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: 03
+--- !u!114 &1998855378227900000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275453136293110252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037e87dba3524cf48b49153ddebdcf77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 1417280211346141265}
+  maxSize: 32
+  minSize: 14
 --- !u!1 &2223522687417509034
 GameObject:
   m_ObjectHideFlags: 0
@@ -246,6 +278,7 @@ GameObject:
   - component: {fileID: 4495062417836493504}
   - component: {fileID: 989822401846089590}
   - component: {fileID: 6866788290710206194}
+  - component: {fileID: 2205108918986733437}
   m_Layer: 5
   m_Name: Pos
   m_TagString: Untagged
@@ -310,10 +343,25 @@ MonoBehaviour:
     m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: 04
+--- !u!114 &2205108918986733437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2415562848318285692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037e87dba3524cf48b49153ddebdcf77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 6866788290710206194}
+  maxSize: 32
+  minSize: 14
 --- !u!1 &3188550311154543689
 GameObject:
   m_ObjectHideFlags: 0
@@ -325,6 +373,7 @@ GameObject:
   - component: {fileID: 1023515087149011107}
   - component: {fileID: 3145101537962862006}
   - component: {fileID: 6691137397129015602}
+  - component: {fileID: 1928990956207800618}
   m_Layer: 5
   m_Name: Driver
   m_TagString: Untagged
@@ -389,10 +438,25 @@ MonoBehaviour:
     m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: DRIVER
+--- !u!114 &1928990956207800618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3188550311154543689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037e87dba3524cf48b49153ddebdcf77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 6691137397129015602}
+  maxSize: 32
+  minSize: 14
 --- !u!1 &3352590632848498282
 GameObject:
   m_ObjectHideFlags: 0
@@ -404,6 +468,7 @@ GameObject:
   - component: {fileID: 2718121927480241791}
   - component: {fileID: 9182193659673750066}
   - component: {fileID: 1135463339522663797}
+  - component: {fileID: 7311304588584765519}
   m_Layer: 5
   m_Name: Driver
   m_TagString: Untagged
@@ -468,10 +533,25 @@ MonoBehaviour:
     m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: DRIVER
+--- !u!114 &7311304588584765519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3352590632848498282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037e87dba3524cf48b49153ddebdcf77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 1135463339522663797}
+  maxSize: 32
+  minSize: 14
 --- !u!1 &3358580142109634805
 GameObject:
   m_ObjectHideFlags: 0
@@ -483,6 +563,7 @@ GameObject:
   - component: {fileID: 2462696794937792213}
   - component: {fileID: 3280400259764746362}
   - component: {fileID: 2632490737497485850}
+  - component: {fileID: 6172691960629649269}
   m_Layer: 5
   m_Name: Pos
   m_TagString: Untagged
@@ -547,10 +628,25 @@ MonoBehaviour:
     m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: 05
+--- !u!114 &6172691960629649269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3358580142109634805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037e87dba3524cf48b49153ddebdcf77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 2632490737497485850}
+  maxSize: 32
+  minSize: 14
 --- !u!1 &3412464127988724020
 GameObject:
   m_ObjectHideFlags: 0
@@ -562,6 +658,7 @@ GameObject:
   - component: {fileID: 2148869417344267742}
   - component: {fileID: 7113987839013270797}
   - component: {fileID: 1081537737614937964}
+  - component: {fileID: 8896562508159508367}
   m_Layer: 5
   m_Name: Driver
   m_TagString: Untagged
@@ -626,10 +723,25 @@ MonoBehaviour:
     m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: DRIVER
+--- !u!114 &8896562508159508367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3412464127988724020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037e87dba3524cf48b49153ddebdcf77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 1081537737614937964}
+  maxSize: 32
+  minSize: 14
 --- !u!1 &3545163556512627189
 GameObject:
   m_ObjectHideFlags: 0
@@ -641,6 +753,7 @@ GameObject:
   - component: {fileID: 232556151664386098}
   - component: {fileID: 6649060382942603420}
   - component: {fileID: 8441617496797728965}
+  - component: {fileID: 3638852095017228282}
   m_Layer: 5
   m_Name: Pos
   m_TagString: Untagged
@@ -705,10 +818,25 @@ MonoBehaviour:
     m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: 01
+--- !u!114 &3638852095017228282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3545163556512627189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037e87dba3524cf48b49153ddebdcf77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 8441617496797728965}
+  maxSize: 32
+  minSize: 14
 --- !u!1 &3588303352684281121
 GameObject:
   m_ObjectHideFlags: 0
@@ -720,6 +848,7 @@ GameObject:
   - component: {fileID: 1749277594958679863}
   - component: {fileID: 983070438732565051}
   - component: {fileID: 3227312622036366178}
+  - component: {fileID: 3297339730643057095}
   m_Layer: 5
   m_Name: TrackSubtitle
   m_TagString: Untagged
@@ -784,10 +913,25 @@ MonoBehaviour:
     m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: CIRCUIT  /  2 LAPS
+--- !u!114 &3297339730643057095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3588303352684281121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037e87dba3524cf48b49153ddebdcf77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 3227312622036366178}
+  maxSize: 26
+  minSize: 12
 --- !u!1 &3827132771822437458
 GameObject:
   m_ObjectHideFlags: 0
@@ -1028,6 +1172,7 @@ GameObject:
   - component: {fileID: 4956018499967660529}
   - component: {fileID: 4083308544932672366}
   - component: {fileID: 4592246686136145848}
+  - component: {fileID: 1395122556753266434}
   m_Layer: 5
   m_Name: Driver
   m_TagString: Untagged
@@ -1092,10 +1237,25 @@ MonoBehaviour:
     m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: DRIVER
+--- !u!114 &1395122556753266434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5514466113612370932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037e87dba3524cf48b49153ddebdcf77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 4592246686136145848}
+  maxSize: 32
+  minSize: 14
 --- !u!1 &5611467268360201058
 GameObject:
   m_ObjectHideFlags: 0
@@ -1182,6 +1342,7 @@ GameObject:
   - component: {fileID: 5946907363696214239}
   - component: {fileID: 2895695526400622388}
   - component: {fileID: 6009625238034008731}
+  - component: {fileID: 891947600986283592}
   m_Layer: 5
   m_Name: Label
   m_TagString: Untagged
@@ -1246,10 +1407,25 @@ MonoBehaviour:
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: STARTING GRID
+--- !u!114 &891947600986283592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5632712997965672725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037e87dba3524cf48b49153ddebdcf77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 6009625238034008731}
+  maxSize: 30
+  minSize: 14
 --- !u!1 &5874542502109727788
 GameObject:
   m_ObjectHideFlags: 0
@@ -1379,6 +1555,7 @@ GameObject:
   - component: {fileID: 2064778966076998791}
   - component: {fileID: 5862161835524924631}
   - component: {fileID: 9140949569710480787}
+  - component: {fileID: 6661203009055931949}
   m_Layer: 5
   m_Name: Driver
   m_TagString: Untagged
@@ -1443,10 +1620,25 @@ MonoBehaviour:
     m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: DRIVER
+--- !u!114 &6661203009055931949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7400386588199495395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037e87dba3524cf48b49153ddebdcf77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 9140949569710480787}
+  maxSize: 32
+  minSize: 14
 --- !u!1 &7442788133436934585
 GameObject:
   m_ObjectHideFlags: 0
@@ -1458,6 +1650,7 @@ GameObject:
   - component: {fileID: 2798138965631668880}
   - component: {fileID: 5843692078234022112}
   - component: {fileID: 7121985897985170856}
+  - component: {fileID: 6391052025237295327}
   m_Layer: 5
   m_Name: Pos
   m_TagString: Untagged
@@ -1522,10 +1715,25 @@ MonoBehaviour:
     m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: 02
+--- !u!114 &6391052025237295327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7442788133436934585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037e87dba3524cf48b49153ddebdcf77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 7121985897985170856}
+  maxSize: 32
+  minSize: 14
 --- !u!1 &7578483557862033738
 GameObject:
   m_ObjectHideFlags: 0
@@ -1614,6 +1822,7 @@ GameObject:
   - component: {fileID: 3221810592693802931}
   - component: {fileID: 8487986067096157558}
   - component: {fileID: 5642350422631597797}
+  - component: {fileID: 2980860191385385339}
   m_Layer: 5
   m_Name: TrackTitle
   m_TagString: Untagged
@@ -1678,10 +1887,25 @@ MonoBehaviour:
     m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: TRACK 1
+--- !u!114 &2980860191385385339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7877919575632420755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037e87dba3524cf48b49153ddebdcf77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 5642350422631597797}
+  maxSize: 80
+  minSize: 36
 --- !u!1 &8448399573194459042
 GameObject:
   m_ObjectHideFlags: 0

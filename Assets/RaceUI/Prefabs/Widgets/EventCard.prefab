@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6043015610753760417}
   - component: {fileID: 908160968539838485}
   - component: {fileID: 7134372270546068018}
+  - component: {fileID: 7887574873944050306}
   m_Layer: 5
   m_Name: Label
   m_TagString: Untagged
@@ -75,10 +76,25 @@ MonoBehaviour:
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: BEST 1ST
+--- !u!114 &7887574873944050306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 488975107171504393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037e87dba3524cf48b49153ddebdcf77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 7134372270546068018}
+  maxSize: 24
+  minSize: 11
 --- !u!1 &899628693153070963
 GameObject:
   m_ObjectHideFlags: 0
@@ -479,6 +495,7 @@ GameObject:
   - component: {fileID: 1142520577409749809}
   - component: {fileID: 5520942128390568427}
   - component: {fileID: 241663036234107009}
+  - component: {fileID: 595540724318234773}
   m_Layer: 5
   m_Name: Title
   m_TagString: Untagged
@@ -501,9 +518,9 @@ RectTransform:
   m_Father: {fileID: 2458214784246182031}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 84, y: -18}
-  m_SizeDelta: {x: 190, y: 40}
+  m_SizeDelta: {x: -180, y: 40}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &5520942128390568427
 CanvasRenderer:
@@ -537,16 +554,31 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 34
     m_FontStyle: 3
-    m_BestFit: 1
+    m_BestFit: 0
     m_MinSize: 20
     m_MaxSize: 34
     m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: SPRINT
+--- !u!114 &595540724318234773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2905155363612666085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037e87dba3524cf48b49153ddebdcf77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 241663036234107009}
+  maxSize: 34
+  minSize: 15
 --- !u!1 &3339460393573993143
 GameObject:
   m_ObjectHideFlags: 0
@@ -859,6 +891,7 @@ GameObject:
   - component: {fileID: 3117943535091844372}
   - component: {fileID: 1648605062218210391}
   - component: {fileID: 5108033962845734078}
+  - component: {fileID: 3111807163142650058}
   m_Layer: 5
   m_Name: Label
   m_TagString: Untagged
@@ -923,10 +956,25 @@ MonoBehaviour:
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: B
+--- !u!114 &3111807163142650058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5052711044862111119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037e87dba3524cf48b49153ddebdcf77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 5108033962845734078}
+  maxSize: 28
+  minSize: 13
 --- !u!1 &5312934512253956094
 GameObject:
   m_ObjectHideFlags: 0
@@ -1014,6 +1062,7 @@ GameObject:
   - component: {fileID: 7596339909738108888}
   - component: {fileID: 590708627942441891}
   - component: {fileID: 4318301282664894033}
+  - component: {fileID: 3885526243627888480}
   m_Layer: 5
   m_Name: Number
   m_TagString: Untagged
@@ -1037,8 +1086,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -22, y: -12}
-  m_SizeDelta: {x: 80, y: 76}
+  m_AnchoredPosition: {x: -18, y: -10}
+  m_SizeDelta: {x: 70, y: 54}
   m_Pivot: {x: 1, y: 1}
 --- !u!222 &590708627942441891
 CanvasRenderer:
@@ -1070,7 +1119,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 64
+    m_FontSize: 62
     m_FontStyle: 3
     m_BestFit: 0
     m_MinSize: 10
@@ -1078,10 +1127,25 @@ MonoBehaviour:
     m_Alignment: 5
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: 1
+--- !u!114 &3885526243627888480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5709369214214652935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037e87dba3524cf48b49153ddebdcf77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 4318301282664894033}
+  maxSize: 64
+  minSize: 29
 --- !u!1 &6386066073693276637
 GameObject:
   m_ObjectHideFlags: 0
@@ -1170,6 +1234,7 @@ GameObject:
   - component: {fileID: 1236367728982580786}
   - component: {fileID: 8562532632011587391}
   - component: {fileID: 6226363972872932154}
+  - component: {fileID: 6629183610787957306}
   m_Layer: 5
   m_Name: Label
   m_TagString: Untagged
@@ -1234,10 +1299,25 @@ MonoBehaviour:
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: C
+--- !u!114 &6629183610787957306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6395657080826017893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037e87dba3524cf48b49153ddebdcf77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 6226363972872932154}
+  maxSize: 28
+  minSize: 13
 --- !u!1 &7075243735496674809
 GameObject:
   m_ObjectHideFlags: 0
@@ -1437,6 +1517,7 @@ GameObject:
   - component: {fileID: 5790875405759061898}
   - component: {fileID: 807670063986544853}
   - component: {fileID: 7012404182778113820}
+  - component: {fileID: 282743953310150173}
   m_Layer: 5
   m_Name: Subtitle
   m_TagString: Untagged
@@ -1459,9 +1540,9 @@ RectTransform:
   m_Father: {fileID: 2458214784246182031}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 84, y: -58}
-  m_SizeDelta: {x: 190, y: 26}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 84, y: -64}
+  m_SizeDelta: {x: -102, y: 28}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &807670063986544853
 CanvasRenderer:
@@ -1501,10 +1582,25 @@ MonoBehaviour:
     m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: DESERT
+--- !u!114 &282743953310150173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8660203716678970794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037e87dba3524cf48b49153ddebdcf77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 7012404182778113820}
+  maxSize: 20
+  minSize: 10
 --- !u!1 &9105795362857106651
 GameObject:
   m_ObjectHideFlags: 0
@@ -1516,6 +1612,7 @@ GameObject:
   - component: {fileID: 995052517088821005}
   - component: {fileID: 718522343118915651}
   - component: {fileID: 6081221202071342176}
+  - component: {fileID: 2287843899653869183}
   m_Layer: 5
   m_Name: Label
   m_TagString: Untagged
@@ -1580,7 +1677,22 @@ MonoBehaviour:
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: A
+--- !u!114 &2287843899653869183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9105795362857106651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037e87dba3524cf48b49153ddebdcf77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 6081221202071342176}
+  maxSize: 28
+  minSize: 13

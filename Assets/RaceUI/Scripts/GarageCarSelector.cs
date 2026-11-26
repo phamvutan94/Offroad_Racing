@@ -87,7 +87,13 @@ namespace RaceUI
         {
             if (spawnedCar != null) Destroy(spawnedCar);
             if (spawnPoint != null && carPrefabs[index] != null)
+            {
                 spawnedCar = Instantiate(carPrefabs[index], spawnPoint.position, spawnPoint.rotation);
+                // showroom car: let the suspension settle but never roll off the platform
+                Rigidbody body = spawnedCar.GetComponent<Rigidbody>();
+                if (body != null)
+                    body.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotationY;
+            }
             if (GameSave.IsCarOwned(index)) GameSave.SelectedCar = index;
             Refresh();
         }

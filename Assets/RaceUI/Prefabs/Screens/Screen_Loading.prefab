@@ -237,6 +237,7 @@ GameObject:
   - component: {fileID: 9066861163395294926}
   - component: {fileID: 7718487841314327790}
   - component: {fileID: 8653778346612259809}
+  - component: {fileID: 4358045818433088503}
   m_Layer: 5
   m_Name: TipLabel
   m_TagString: Untagged
@@ -301,7 +302,7 @@ MonoBehaviour:
     m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: TRAIL TIP
@@ -320,6 +321,21 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.6}
   m_EffectDistance: {x: 2, y: -2}
   m_UseGraphicAlpha: 1
+--- !u!114 &4358045818433088503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1524413052266062020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037e87dba3524cf48b49153ddebdcf77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 7718487841314327790}
+  maxSize: 24
+  minSize: 11
 --- !u!1 &1721254620560915510
 GameObject:
   m_ObjectHideFlags: 0
@@ -331,6 +347,7 @@ GameObject:
   - component: {fileID: 8978235992453300383}
   - component: {fileID: 8132924939734175685}
   - component: {fileID: 3870998323410233575}
+  - component: {fileID: 2265931007809833989}
   m_Layer: 5
   m_Name: GameTitle
   m_TagString: Untagged
@@ -395,10 +412,25 @@ MonoBehaviour:
     m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: OFFROAD RUSH
+--- !u!114 &2265931007809833989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1721254620560915510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037e87dba3524cf48b49153ddebdcf77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 3870998323410233575}
+  maxSize: 56
+  minSize: 25
 --- !u!1 &1768326303575749347
 GameObject:
   m_ObjectHideFlags: 0
@@ -820,14 +852,14 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 28
     m_FontStyle: 2
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_BestFit: 1
+    m_MinSize: 14
+    m_MaxSize: 28
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 1
+    m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 'Brake before the turn.
 
@@ -858,6 +890,7 @@ GameObject:
   - component: {fileID: 8193254833248308217}
   - component: {fileID: 1706820827285493883}
   - component: {fileID: 161655958331939265}
+  - component: {fileID: 1558414554400042779}
   m_Layer: 5
   m_Name: Caption
   m_TagString: Untagged
@@ -922,10 +955,25 @@ MonoBehaviour:
     m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: DESERT / SPRINT
+--- !u!114 &1558414554400042779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4905611130444469453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037e87dba3524cf48b49153ddebdcf77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 161655958331939265}
+  maxSize: 44
+  minSize: 20
 --- !u!1 &6332295110885841635
 GameObject:
   m_ObjectHideFlags: 0
@@ -1067,6 +1115,7 @@ GameObject:
   - component: {fileID: 4532036662385993408}
   - component: {fileID: 1874791812197599234}
   - component: {fileID: 8973654903365610483}
+  - component: {fileID: 5299936395023165762}
   m_Layer: 5
   m_Name: Label
   m_TagString: Untagged
@@ -1131,7 +1180,7 @@ MonoBehaviour:
     m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: LOADING
@@ -1150,6 +1199,21 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.6}
   m_EffectDistance: {x: 2, y: -2}
   m_UseGraphicAlpha: 1
+--- !u!114 &5299936395023165762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7439019251314157534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037e87dba3524cf48b49153ddebdcf77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 1874791812197599234}
+  maxSize: 68
+  minSize: 31
 --- !u!1 &8420444652389583838
 GameObject:
   m_ObjectHideFlags: 0

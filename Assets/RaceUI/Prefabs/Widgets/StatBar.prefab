@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3642410934690084406}
   - component: {fileID: 5185997469784842965}
   - component: {fileID: 3589184551386483356}
+  - component: {fileID: 2431181687355922597}
   m_Layer: 5
   m_Name: Value
   m_TagString: Untagged
@@ -75,10 +76,25 @@ MonoBehaviour:
     m_Alignment: 5
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: 80%
+--- !u!114 &2431181687355922597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1582543868418275763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037e87dba3524cf48b49153ddebdcf77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 3589184551386483356}
+  maxSize: 24
+  minSize: 11
 --- !u!1 &3408308743672540816
 GameObject:
   m_ObjectHideFlags: 0
@@ -126,6 +142,7 @@ GameObject:
   - component: {fileID: 6040043034709386171}
   - component: {fileID: 2541909935238151728}
   - component: {fileID: 1381457315786007801}
+  - component: {fileID: 6595391478220921206}
   m_Layer: 5
   m_Name: Label
   m_TagString: Untagged
@@ -190,10 +207,25 @@ MonoBehaviour:
     m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: SPEED
+--- !u!114 &6595391478220921206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4075069809029331271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037e87dba3524cf48b49153ddebdcf77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 1381457315786007801}
+  maxSize: 24
+  minSize: 11
 --- !u!1 &5738306583771743044
 GameObject:
   m_ObjectHideFlags: 0
@@ -488,3 +520,4 @@ MonoBehaviour:
   label: {fileID: 1381457315786007801}
   valueText: {fileID: 3589184551386483356}
   valueFormat: '{0:0}%'
+  smoothTime: 0.25

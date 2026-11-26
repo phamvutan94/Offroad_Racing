@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 6952173289323197420}
   - component: {fileID: 2832067336045147490}
   - component: {fileID: 4718578656497272}
+  - component: {fileID: 2116578039954038604}
   m_Layer: 5
   m_Name: Title
   m_TagString: Untagged
@@ -158,10 +159,25 @@ MonoBehaviour:
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: PAUSED
+--- !u!114 &2116578039954038604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1760914687201032375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037e87dba3524cf48b49153ddebdcf77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 4718578656497272}
+  maxSize: 72
+  minSize: 32
 --- !u!1 &1877086299390363424
 GameObject:
   m_ObjectHideFlags: 0
@@ -239,6 +255,7 @@ GameObject:
   - component: {fileID: 8099279525337600890}
   - component: {fileID: 1146381164716101764}
   - component: {fileID: 4026716373531319536}
+  - component: {fileID: 7140278595792363164}
   m_Layer: 5
   m_Name: LoadingText
   m_TagString: Untagged
@@ -303,10 +320,25 @@ MonoBehaviour:
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: 
+--- !u!114 &7140278595792363164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3104110494895610666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037e87dba3524cf48b49153ddebdcf77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 4026716373531319536}
+  maxSize: 24
+  minSize: 11
 --- !u!1 &8000203128599382465
 GameObject:
   m_ObjectHideFlags: 0
@@ -443,6 +475,7 @@ GameObject:
   - component: {fileID: 7519002258821318218}
   - component: {fileID: 2016035709594839561}
   - component: {fileID: 5401204941212837252}
+  - component: {fileID: 2382385232049161923}
   m_Layer: 5
   m_Name: Subtitle
   m_TagString: Untagged
@@ -507,10 +540,25 @@ MonoBehaviour:
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: TAKE A BREATHER
+--- !u!114 &2382385232049161923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9159550572738786835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037e87dba3524cf48b49153ddebdcf77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 5401204941212837252}
+  maxSize: 24
+  minSize: 11
 --- !u!1 &9215236582118328589
 GameObject:
   m_ObjectHideFlags: 0

@@ -489,6 +489,7 @@ GameObject:
   - component: {fileID: 7891050569536307342}
   - component: {fileID: 5443836519474820554}
   - component: {fileID: 4523608998795394636}
+  - component: {fileID: 8379087895450208504}
   m_Layer: 5
   m_Name: Label
   m_TagString: Untagged
@@ -547,16 +548,31 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 30
     m_FontStyle: 3
-    m_BestFit: 1
+    m_BestFit: 0
     m_MinSize: 18
     m_MaxSize: 30
     m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: GARAGE
+--- !u!114 &8379087895450208504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8498709237811351874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037e87dba3524cf48b49153ddebdcf77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 4523608998795394636}
+  maxSize: 30
+  minSize: 14
 --- !u!1 &8885536622728560621
 GameObject:
   m_ObjectHideFlags: 0

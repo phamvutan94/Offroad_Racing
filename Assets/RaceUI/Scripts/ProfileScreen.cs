@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,6 +17,15 @@ namespace RaceUI
         [SerializeField] private StatBar xpBar;
         [SerializeField] private Text xpLabel;
 
+        [Header("Car framing")]
+        [SerializeField] private GarageOrbitCamera orbitCamera;
+        [Tooltip("Right-most panel of the screen: the car is centred in the free space to its right")]
+        [SerializeField] private RectTransform panelsRightEdge;
+        [Tooltip("Camera distance while the profile is open, so the whole car fits the free area")]
+        [SerializeField] private float framingDistance = 5.6f;
+
+        private readonly Vector3[] corners = new Vector3[4];
+
         private void Awake()
         {
             nameInput.characterLimit = GameSave.MaxNameLength;
@@ -26,9 +36,24 @@ namespace RaceUI
         {
             GameSave.ProfileChanged += Refresh;
             Refresh();
+            StartCoroutine(FrameCarNextFrame());
         }
 
-        private void OnDisable() => GameSave.ProfileChanged -= Refresh;
+        private void OnDisable()
+        {
+            GameSave.ProfileChanged -= Refresh;
+            if (orbitCamera != null) orbitCamera.ResetFocus();
+        }
+
+        // the screen's layout (safe area, fade-in scale) settles after the first frame
+        private IEnumerator FrameCarNextFrame()
+        {
+            if (orbitCamera == null || panelsRightEdge == null) yield break;
+            yield return null;
+            panelsRightEdge.GetWorldCorners(corners); // screen pixels on an overlay canvas
+            float edge = Mathf.Clamp01(corners[2].x / Mathf.Max(1, Screen.width));
+            orbitCamera.SetFocusViewportX((edge + 1f) * 0.5f, framingDistance);
+        }
 
         private void SaveName(string value) => GameSave.PlayerName = value;
 

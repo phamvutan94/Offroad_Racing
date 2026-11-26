@@ -29,7 +29,35 @@ namespace RaceUI
         [SerializeField] private float idleDelay = 5f;
         [SerializeField] private float idleOrbitSpeed = 8f;   // degrees per second
 
+        [Header("Framing")]
+        [SerializeField] private Camera cam;
+        [Tooltip("Time to slide the car to a new spot on screen (e.g. when a side panel opens)")]
+        [SerializeField, Min(0.01f)] private float framingSmoothTime = 0.35f;
+
         private float yaw, pitch, distance;
+        private float focusX = 0.5f, focusXTarget = 0.5f, focusVelocity;
+        private float framingDistance, distanceVelocity, distanceBeforeFraming = -1f;
+
+        private void Reset() => cam = GetComponent<Camera>();
+
+        /// Slides the view so the car sits at this horizontal viewport position (0.5 = centre).
+        /// Optionally backs the camera off to at least minDistance so the car fits the smaller free area.
+        public void SetFocusViewportX(float x, float minDistance = 0f)
+        {
+            focusXTarget = Mathf.Clamp(x, 0.2f, 0.8f);
+            if (minDistance > 0f)
+            {
+                if (distanceBeforeFraming < 0f) distanceBeforeFraming = distance;
+                framingDistance = Mathf.Clamp(minDistance, this.minDistance, maxDistance);
+            }
+        }
+
+        public void ResetFocus()
+        {
+            focusXTarget = 0.5f;
+            if (distanceBeforeFraming >= 0f) framingDistance = distanceBeforeFraming;
+            distanceBeforeFraming = -1f;
+        }
         private float yawVelocity, pitchVelocity;
 
         private Vector3 Pivot => target.position + targetOffset;
@@ -73,6 +101,17 @@ namespace RaceUI
             yaw += yawVelocity * dt;
             pitch = Mathf.Clamp(pitch + pitchVelocity * dt, minPitch, maxPitch);
             distance = Mathf.Clamp(distance - pinch * zoomPerScreen, minDistance, maxDistance);
+            focusX = Mathf.SmoothDamp(focusX, focusXTarget, ref focusVelocity, framingSmoothTime, Mathf.Infinity, dt);
+            if (framingDistance > 0f)
+            {
+                // ease to the framing distance; a pinch takes over again afterwards
+                if (Mathf.Abs(pinch) > 0f) framingDistance = 0f;
+                else
+                {
+                    distance = Mathf.SmoothDamp(distance, framingDistance, ref distanceVelocity, framingSmoothTime, Mathf.Infinity, dt);
+                    if (Mathf.Abs(distance - framingDistance) < 0.01f && distanceBeforeFraming < 0f) framingDistance = 0f;
+                }
+            }
             Apply();
         }
 
@@ -81,6 +120,12 @@ namespace RaceUI
             Vector3 pivot = Pivot;
             transform.position = pivot + Quaternion.Euler(pitch, yaw, 0f) * Vector3.back * distance;
             transform.LookAt(pivot);
+            if (cam != null && !Mathf.Approximately(focusX, 0.5f))
+            {
+                // shift sideways (same rotation) so the pivot lands at focusX on screen
+                float halfWidth = distance * Mathf.Tan(cam.fieldOfView * 0.5f * Mathf.Deg2Rad) * cam.aspect;
+                transform.position -= transform.right * ((focusX - 0.5f) * 2f * halfWidth);
+            }
         }
     }
 }

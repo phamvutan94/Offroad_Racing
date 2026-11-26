@@ -86,6 +86,7 @@ GameObject:
   - component: {fileID: 7451060027662844050}
   - component: {fileID: 7507687282904806098}
   - component: {fileID: 3649339633119504793}
+  - component: {fileID: 3676797297455197374}
   m_Layer: 5
   m_Name: Subtitle
   m_TagString: Untagged
@@ -150,10 +151,25 @@ MonoBehaviour:
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: EXPLORE
+--- !u!114 &3676797297455197374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4783347439344231160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037e87dba3524cf48b49153ddebdcf77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 3649339633119504793}
+  maxSize: 20
+  minSize: 10
 --- !u!1 &6490270238132706332
 GameObject:
   m_ObjectHideFlags: 0
@@ -306,6 +322,7 @@ GameObject:
   - component: {fileID: 6649574079210598667}
   - component: {fileID: 2103110853445185595}
   - component: {fileID: 3623505080301150087}
+  - component: {fileID: 5051477632539738131}
   m_Layer: 5
   m_Name: Title
   m_TagString: Untagged
@@ -364,16 +381,31 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 40
     m_FontStyle: 3
-    m_BestFit: 1
+    m_BestFit: 0
     m_MinSize: 22
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: TILE
+--- !u!114 &5051477632539738131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7472337900421046594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037e87dba3524cf48b49153ddebdcf77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 3623505080301150087}
+  maxSize: 40
+  minSize: 18
 --- !u!1 &8696428916505842145
 GameObject:
   m_ObjectHideFlags: 0
