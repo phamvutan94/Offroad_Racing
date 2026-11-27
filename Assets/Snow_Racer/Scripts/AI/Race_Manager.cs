@@ -1,4 +1,4 @@
-//______________________________________________
+﻿//______________________________________________
 // ALIyerEdon
 // https://assetstore.unity.com/publishers/23606
 //______________________________________________
@@ -86,6 +86,7 @@ namespace ALIyerEdon
 
         // Read-only accessors used by the RaceUI HUD/result screens (no scene lookups needed there).
         public Car_Position PlayerPosition => playerPosition;
+        public Car_Position[] CarPositions => carPositions;
         public EasyCarController PlayerCar => playerPosition ? playerPosition.GetComponent<EasyCarController>() : null;
         public string PlayerName => playerName;
         public int RacerCount => sortedPositions.Count;

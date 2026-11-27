@@ -45,6 +45,8 @@ namespace RaceUI
         [SerializeField] private Race_Manager raceManager;
         [SerializeField] private Behaviour sunShaftEffect;
 
+        private const int MaxQualityLevel = 3; // High (Ultra/Max are hidden in the prefab)
+
         private bool listening;
 
         private void Awake()
@@ -99,7 +101,7 @@ namespace RaceUI
         private void OnEnable()
         {
             listening = false;
-            quality.SetWithoutNotify(PlayerPrefs.GetInt("QualityLevel"));
+            quality.SetWithoutNotify(Mathf.Min(PlayerPrefs.GetInt("QualityLevel"), MaxQualityLevel));
             sunShaft.SetWithoutNotify(PlayerPrefs.GetInt("Sun Shaft"));
             wheelSmoke.SetWithoutNotify(PlayerPrefs.GetInt("Wheel Smoke"));
             balloons.SetWithoutNotify(PlayerPrefs.GetInt("Balloons"));

@@ -13,6 +13,7 @@ namespace RaceUI
         [SerializeField] private GarageCarSelector cars;
 
         [Header("Car card")]
+        [SerializeField] private Image carThumb;
         [SerializeField] private Text carName;
         [SerializeField] private Text carSubtitle;
         [SerializeField] private Text classLetter;
@@ -133,6 +134,7 @@ namespace RaceUI
             string cls = config.ClassLetter(pi);
 
             carName.text = cars != null ? cars.CarDisplayName : "CAR";
+            if (carThumb != null && cars != null && cars.CarTitle != null) carThumb.sprite = cars.CarTitle;
             carSubtitle.text = GameSave.IsCarOwned(car) ? "STOCK" : "NOT OWNED";
             int tuned = 0; foreach (var l in levels) tuned += l;
             if (GameSave.IsCarOwned(car) && tuned > 0) carSubtitle.text = "TUNED  /  " + tuned + (tuned == 1 ? " UPGRADE" : " UPGRADES");

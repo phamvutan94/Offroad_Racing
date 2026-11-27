@@ -103,6 +103,10 @@ namespace ALIyerEdon
 				// Disable the first running the game settings
 				PlayerPrefs.SetInt("FirstRun", 3);
 			}
+
+			// Ultra/Max graphics and the FPS display were removed from Settings: clamp values saved by older builds.
+			PlayerPrefs.SetInt("QualityLevel", Mathf.Min(PlayerPrefs.GetInt("QualityLevel"), 3));
+			PlayerPrefs.SetInt("Display FPS", 0);
 		}
 
 		void Update()

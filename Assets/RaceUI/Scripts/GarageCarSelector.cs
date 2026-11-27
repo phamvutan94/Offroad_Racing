@@ -16,6 +16,8 @@ namespace RaceUI
         [SerializeField] private GameObject[] carPrefabs;
         [SerializeField] private int[] carPrices;
         [SerializeField] private string[] carNames;
+        [Tooltip("Title art per car (Art/Cars/carN_title), shown on the tuning car card")]
+        [SerializeField] private Sprite[] carTitles;
 
         [Header("Performance bars (stats from the tuning config, upgrades included)")]
         [SerializeField] private TuningConfig tuning;
@@ -46,6 +48,7 @@ namespace RaceUI
 
         public int Index => index;
         public string CarDisplayName => CarName(index);
+        public Sprite CarTitle => index < carTitles.Length ? carTitles[index] : null;
 
         private void Start()
         {

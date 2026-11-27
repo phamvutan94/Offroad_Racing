@@ -1633,7 +1633,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &450053807940914471
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3357,6 +3357,10 @@ PrefabInstance:
     - target: {fileID: 3306493498572233101, guid: cf7993e11630ba04fa8e8ed5f9aed77c, type: 3}
       propertyPath: m_Name
       value: Row_DisplayFPS
+      objectReference: {fileID: 0}
+    - target: {fileID: 3306493498572233101, guid: cf7993e11630ba04fa8e8ed5f9aed77c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3909459028015610388, guid: cf7993e11630ba04fa8e8ed5f9aed77c, type: 3}
       propertyPath: m_Text
@@ -6018,6 +6022,10 @@ PrefabInstance:
     - target: {fileID: 2517414617827333374, guid: cf7993e11630ba04fa8e8ed5f9aed77c, type: 3}
       propertyPath: m_Text
       value: Graphic Quality
+      objectReference: {fileID: 0}
+    - target: {fileID: 2669326942587863161, guid: cf7993e11630ba04fa8e8ed5f9aed77c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3034803971398792486, guid: cf7993e11630ba04fa8e8ed5f9aed77c, type: 3}
       propertyPath: m_AnchorMax.x

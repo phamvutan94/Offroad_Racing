@@ -56,7 +56,7 @@ namespace ALIyerEdon
             #endregion
 
             #region Quality_Level
-            Set_QualityLevel(PlayerPrefs.GetInt("QualityLevel"));
+            Set_QualityLevel(Mathf.Min(PlayerPrefs.GetInt("QualityLevel"), 3)); // Ultra/Max removed
             #endregion
 
         }

@@ -4456,6 +4456,11 @@ MonoBehaviour:
   - RIDGE HUNTER
   - TRAIL BREAKER
   - DUST COMET
+  carTitles:
+  - {fileID: 21300000, guid: 9b7041718b2f9684c89655987585c2c5, type: 3}
+  - {fileID: 21300000, guid: de775898dda42674e887c5b17d29b0db, type: 3}
+  - {fileID: 21300000, guid: 78e88bf18ec10264a889a40ab402f9fb, type: 3}
+  - {fileID: 21300000, guid: d2f7ba41922dad249a966d18aba2f554, type: 3}
   tuning: {fileID: 11400000, guid: 7772835a5600ce442b9567b6e6d52aab, type: 2}
   statEmpty: 3
   statFull: 9
@@ -7107,7 +7112,7 @@ PrefabInstance:
     - target: {fileID: 3587975833628793224, guid: 6fedfbf720a80434684c5d7b300bda0a, type: 3}
       propertyPath: confirm
       value: 
-      objectReference: {fileID: 2128012961}
+      objectReference: {fileID: 166278828}
     - target: {fileID: 3742412014356391715, guid: 6fedfbf720a80434684c5d7b300bda0a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
@@ -11782,17 +11787,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3966620099100689961, guid: 9f237b2767f2fad43aa29f64c8abde4b, type: 3}
   m_PrefabInstance: {fileID: 2128012958}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2128012961 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8585844544717455324, guid: 9f237b2767f2fad43aa29f64c8abde4b, type: 3}
-  m_PrefabInstance: {fileID: 2128012958}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2128012960}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc49c5c3e233ffa4dbdde126e154a36e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2128827275
 GameObject:
   m_ObjectHideFlags: 0
