@@ -1,4 +1,4 @@
-//______________________________________________
+﻿//______________________________________________
 // ALIyerEdon
 // https://assetstore.unity.com/publishers/23606
 //______________________________________________
@@ -30,6 +30,8 @@ namespace ALIyerEdon
         // Extra look-around angles (set by RaceUI.RaceCameraSwipe). Zero = original behaviour.
         [HideInInspector] public float yawOffset;
         [HideInInspector] public float pitchOffset;
+        // Pinch zoom (set by RaceUI.RaceCameraSwipe): multiplies the follow distance. 1 = original behaviour.
+        [HideInInspector] public float zoom = 1f;
         float baseX, baseY;
         bool baseReady;
 
@@ -41,6 +43,15 @@ namespace ALIyerEdon
             target = GameObject.FindGameObjectWithTag("Player").transform;
 
             myRigidbody = target.GetComponent<Rigidbody>();
+
+            // Tall cars carry their own chase framing (RaceUI.CarCameraFraming); other cars keep the scene values.
+            var framing = target.GetComponent<RaceUI.CarCameraFraming>();
+            if (framing != null)
+            {
+                distance = framing.Distance;
+                height = framing.Height;
+                Angle = framing.Angle;
+            }
 
             //Face the camera to the car forward at start
             transform.position = new Vector3(target.position.x,
@@ -69,9 +80,10 @@ namespace ALIyerEdon
             transform.eulerAngles = new Vector3(baseX + pitchOffset, baseY + yawOffset, 0.0f);
 
             var direction = transform.rotation * -Vector3.forward;
-            var targetDistance = AdjustLineOfSight(target.position + new Vector3(0, height, 0), direction);
+            float zoomedHeight = height * Mathf.Lerp(1f, zoom, 0.6f);
+            var targetDistance = AdjustLineOfSight(target.position + new Vector3(0, zoomedHeight, 0), direction);
 
-            transform.position = target.position + new Vector3(0, height, 0) + direction * targetDistance;
+            transform.position = target.position + new Vector3(0, zoomedHeight, 0) + direction * targetDistance;
 
         }
 
@@ -79,10 +91,11 @@ namespace ALIyerEdon
         {
             RaycastHit hit;
 
-            if (Physics.Raycast(target, direction, out hit, distance, lineOfSightMask.value))
+            float zoomedDistance = distance * zoom;
+            if (Physics.Raycast(target, direction, out hit, zoomedDistance, lineOfSightMask.value))
                 return hit.distance;
             else
-                return distance;
+                return zoomedDistance;
         }
     }
 }

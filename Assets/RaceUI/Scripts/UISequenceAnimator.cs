@@ -5,7 +5,7 @@ namespace RaceUI
 {
     /// <summary>
     /// Plays an entrance sequence every time the object is enabled: each step slides / scales / fades one element
-    /// in after its delay. Steps are set up in the Inspector; uses unscaled time so it also runs while paused.
+    /// in after its delay. Steps are set up in the Inspector; uses real time so it also runs while paused.
     /// </summary>
     public sealed class UISequenceAnimator : MonoBehaviour
     {
@@ -81,8 +81,10 @@ namespace RaceUI
 
         private IEnumerator Run(Step s)
         {
-            for (float t = 0; t < startDelay + s.delay; t += Time.unscaledDeltaTime) yield return null;
-            for (float t = 0; t < s.duration; t += Time.unscaledDeltaTime)
+            // wall-clock time: independent of timeScale and of editor frame hitches
+            float start = Time.realtimeSinceStartup + startDelay + s.delay;
+            while (Time.realtimeSinceStartup < start) yield return null;
+            for (float t = 0; t < s.duration; t = Time.realtimeSinceStartup - start)
             {
                 Apply(s, t / s.duration);
                 yield return null;

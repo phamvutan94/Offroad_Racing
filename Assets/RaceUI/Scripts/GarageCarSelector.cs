@@ -48,6 +48,9 @@ namespace RaceUI
 
         public int Index => index;
         public string CarDisplayName => CarName(index);
+        public int CarCount => carPrefabs.Length;
+        /// Re-reads ownership/stats after save data changed outside the garage UI (test menu).
+        public void RefreshView() => Refresh();
         public Sprite CarTitle => index < carTitles.Length ? carTitles[index] : null;
 
         private void Start()

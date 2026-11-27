@@ -20,6 +20,12 @@ namespace RaceUI
         [SerializeField] private Checkpoint_Manager checkpointManager;
         [SerializeField] private Behaviour sunShaftEffect;
         [SerializeField] private string trackTitle = "TRACK 1";
+        [Tooltip("Camera used after the finish line (CameraSwitch slot 0, the Main Camera); finish FX are attached to it")]
+        [SerializeField] private Transform finishCamera;
+        [Tooltip("Two AI lanes either side of the centre (Path_2, Path_3); their average is the track centreline")]
+        [SerializeField] private Waypoint_System[] trackLanes;
+        [Tooltip("Horizontal distance from the centreline beyond which the player's car counts as off the track")]
+        [SerializeField] private float trackLimit = 30f;
 
         [Header("Inside the prefab")]
         [SerializeField] private Text[] trackTitleLabels;
@@ -40,6 +46,9 @@ namespace RaceUI
         public Checkpoint_Manager CheckpointManager => checkpointManager;
         public Behaviour SunShaftEffect => sunShaftEffect;
         public string TrackTitle => trackTitle;
+        public Transform FinishCamera => finishCamera;
+        public Waypoint_System[] TrackLanes => trackLanes;
+        public float TrackLimit => trackLimit;
 
         private void Start()
         {

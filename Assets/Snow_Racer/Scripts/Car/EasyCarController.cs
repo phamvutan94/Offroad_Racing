@@ -63,6 +63,10 @@ namespace ALIyerEdon
 		// Wheel colliders settings
 		public float brakeFriction = 4f;
 		public float handBrakeFriction = 0.75f;
+		[Tooltip("Rigidbody drag while below maxSpeed (lower = higher reachable top speed)")]
+		public float rollingDrag = 0.05f;
+		[Tooltip("Rigidbody drag once maxSpeed is reached (soft speed limiter)")]
+		public float limiterDrag = 0.3f;
 
 		// Store default max speed for speed limit triggers
 		[HideInInspector] public float originalMaxSpeed = 74f;
@@ -407,9 +411,9 @@ namespace ALIyerEdon
 				#region Speed Limiter
 				// Speed limiter
 				if (currentSpeed >= maxSpeed)
-					rigid.linearDamping = 0.3f;
+					rigid.linearDamping = limiterDrag;
 				else
-					rigid.linearDamping = 0.05f;
+					rigid.linearDamping = rollingDrag;
                 #endregion
 
                 #region Offroad

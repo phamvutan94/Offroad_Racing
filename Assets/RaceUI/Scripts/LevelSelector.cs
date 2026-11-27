@@ -53,6 +53,12 @@ namespace RaceUI
         }
 
         /// Called by each card's Button (persistent int listener).
+        public int TrackCount => sceneNames.Length;
+        public string SceneNameAt(int index) => sceneNames[Mathf.Clamp(index, 0, sceneNames.Length - 1)];
+        public string TitleAt(int index) => titles[Mathf.Clamp(index, 0, titles.Length - 1)];
+        /// Re-reads unlocks after save data changed outside the World Tour UI (test menu).
+        public void RefreshView() { if (cards != null && cards.Length > 0 && cards[0] != null) Refresh(); }
+
         public void Select(int index)
         {
             selected = Mathf.Clamp(index, 0, sceneNames.Length - 1);

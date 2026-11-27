@@ -400,8 +400,10 @@ MonoBehaviour:
   stopCarDamping: 2.5
   confettiCannon: {fileID: 165102, guid: 4de72d65c2293424cbe6461a89fe2997, type: 3}
   confettiShower: {fileID: 155770, guid: 039f0809d882b7f44ac9a410a3f7fa26, type: 3}
+  confettiBlast: {fileID: 129898, guid: 36bdc02b23d9ca94d93bd715c0cca5c0, type: 3}
   cannonSide: 4.5
   showerHeight: 7
+  confettiScale: 2
 --- !u!114 &3576145141350798263
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -535,7 +537,7 @@ MonoBehaviour:
     fromScale: 1
     ease: 1
   playOnEnable: 1
-  startDelay: 1.6
+  startDelay: 2
 --- !u!1 &324832518970634043
 GameObject:
   m_ObjectHideFlags: 0

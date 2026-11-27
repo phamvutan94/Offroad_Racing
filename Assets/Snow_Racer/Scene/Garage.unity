@@ -4193,6 +4193,115 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 691378904}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &700530200
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1308926906262417003, guid: abc662c00a264cb428c415ae119aa0df, type: 3}
+      propertyPath: m_Name
+      value: RaceUI_DebugPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 1989626343994349889, guid: abc662c00a264cb428c415ae119aa0df, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1989626343994349889, guid: abc662c00a264cb428c415ae119aa0df, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1989626343994349889, guid: abc662c00a264cb428c415ae119aa0df, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1989626343994349889, guid: abc662c00a264cb428c415ae119aa0df, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1989626343994349889, guid: abc662c00a264cb428c415ae119aa0df, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1989626343994349889, guid: abc662c00a264cb428c415ae119aa0df, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1989626343994349889, guid: abc662c00a264cb428c415ae119aa0df, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1989626343994349889, guid: abc662c00a264cb428c415ae119aa0df, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1989626343994349889, guid: abc662c00a264cb428c415ae119aa0df, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1989626343994349889, guid: abc662c00a264cb428c415ae119aa0df, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1989626343994349889, guid: abc662c00a264cb428c415ae119aa0df, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1989626343994349889, guid: abc662c00a264cb428c415ae119aa0df, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1989626343994349889, guid: abc662c00a264cb428c415ae119aa0df, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1989626343994349889, guid: abc662c00a264cb428c415ae119aa0df, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1989626343994349889, guid: abc662c00a264cb428c415ae119aa0df, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1989626343994349889, guid: abc662c00a264cb428c415ae119aa0df, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1989626343994349889, guid: abc662c00a264cb428c415ae119aa0df, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1989626343994349889, guid: abc662c00a264cb428c415ae119aa0df, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1989626343994349889, guid: abc662c00a264cb428c415ae119aa0df, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1989626343994349889, guid: abc662c00a264cb428c415ae119aa0df, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8051481690779771478, guid: abc662c00a264cb428c415ae119aa0df, type: 3}
+      propertyPath: cars
+      value: 
+      objectReference: {fileID: 741232364}
+    - target: {fileID: 8051481690779771478, guid: abc662c00a264cb428c415ae119aa0df, type: 3}
+      propertyPath: levels
+      value: 
+      objectReference: {fileID: 741232363}
+    - target: {fileID: 8051481690779771478, guid: abc662c00a264cb428c415ae119aa0df, type: 3}
+      propertyPath: tuning
+      value: 
+      objectReference: {fileID: 11400000, guid: 7772835a5600ce442b9567b6e6d52aab, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: abc662c00a264cb428c415ae119aa0df, type: 3}
 --- !u!1 &722256078
 GameObject:
   m_ObjectHideFlags: 0
@@ -4450,17 +4559,38 @@ MonoBehaviour:
   - {fileID: 2248334543200859818, guid: 2a7e41dfa2d916547a5e4adc28481a4b, type: 3}
   - {fileID: 7300949668608905000, guid: b5ae5e299c5a6db488631c9dcc6c88e4, type: 3}
   - {fileID: 2955039213994686361, guid: 66ea8728d8f4e174da616423947e7959, type: 3}
-  carPrices: e8030000d0070000b80b0000a00f0000
+  - {fileID: 2955039213994686361, guid: 04672eea882c924408876569209f0a91, type: 3}
+  - {fileID: 2955039213994686361, guid: 3ed46e9fb6e08d449b6d341a5e56f8c4, type: 3}
+  - {fileID: 2955039213994686361, guid: bfecefb6616c28c4d9f65f0863b9a393, type: 3}
+  - {fileID: 2955039213994686361, guid: e392bc8e93204f34bae67c37002922ec, type: 3}
+  - {fileID: 2955039213994686361, guid: a28fd884f9f3f074ba2111a78193e176, type: 3}
+  - {fileID: 2955039213994686361, guid: 71a3c1a7b846cab42baf173539b48837, type: 3}
+  - {fileID: 2955039213994686361, guid: d14f91c0d054ac74982fe90bf1bcb18a, type: 3}
+  carPrices: e8030000ac8a0000dc050000f47e0000e803000098b70000102700002cc900006496000044c5000014500000
   carNames:
   - DUNE RUNNER
   - RIDGE HUNTER
   - TRAIL BREAKER
   - DUST COMET
+  - TERRA RANGER
+  - STORM HOPPER
+  - CANYON CLAW
+  - GRAVEL FURY
+  - RAT RAIDER
+  - SAFARI GT
+  - VOLT TITAN
   carTitles:
   - {fileID: 21300000, guid: 9b7041718b2f9684c89655987585c2c5, type: 3}
   - {fileID: 21300000, guid: de775898dda42674e887c5b17d29b0db, type: 3}
   - {fileID: 21300000, guid: 78e88bf18ec10264a889a40ab402f9fb, type: 3}
   - {fileID: 21300000, guid: d2f7ba41922dad249a966d18aba2f554, type: 3}
+  - {fileID: 21300000, guid: 77deff6924b2a374399ccef08c65d9e0, type: 3}
+  - {fileID: 21300000, guid: dd23cede3fc087f4eaf13eb0c8f6bb07, type: 3}
+  - {fileID: 21300000, guid: 3b4757f08388e1c4996ffa794c7361e7, type: 3}
+  - {fileID: 21300000, guid: f3a48c4aad22674499aba174f5fc8383, type: 3}
+  - {fileID: 21300000, guid: 67d5dfdf0b6c0d743a8932bb381b433f, type: 3}
+  - {fileID: 21300000, guid: 0e23a1ebca52aa44a8f7f566356dfe53, type: 3}
+  - {fileID: 21300000, guid: c85191d8a59c40a4188ccb7783362c46, type: 3}
   tuning: {fileID: 11400000, guid: 7772835a5600ce442b9567b6e6d52aab, type: 2}
   statEmpty: 3
   statFull: 9
@@ -12092,3 +12222,4 @@ SceneRoots:
   - {fileID: 741232366}
   - {fileID: 1821572399}
   - {fileID: 1563818629}
+  - {fileID: 700530200}

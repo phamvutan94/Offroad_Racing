@@ -1143,6 +1143,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 900652fc5e43a4a4191fa17862b3dc3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wheelZoomPerNotch: 0.05
+  scrollUnitsPerNotch: 6
 --- !u!1 &3332362843667673264
 GameObject:
   m_ObjectHideFlags: 0
@@ -4577,6 +4579,10 @@ PrefabInstance:
       propertyPath: m_Text
       value: CAR STORE
       objectReference: {fileID: 0}
+    - target: {fileID: 3623505080301150087, guid: 2099d2e20f379424493d00d1d07950e8, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 36
+      objectReference: {fileID: 0}
     - target: {fileID: 3662375860529973836, guid: 2099d2e20f379424493d00d1d07950e8, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -5028,38 +5034,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2160202663525195868}
     m_Modifications:
-    - target: {fileID: 428976977312719460, guid: 5cdc20d2a21d9694d955d8edaeb17af7, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 76
-      objectReference: {fileID: 0}
-    - target: {fileID: 428976977312719460, guid: 5cdc20d2a21d9694d955d8edaeb17af7, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 76
-      objectReference: {fileID: 0}
-    - target: {fileID: 1282470148176026192, guid: 5cdc20d2a21d9694d955d8edaeb17af7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1282470148176026192, guid: 5cdc20d2a21d9694d955d8edaeb17af7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1282470148176026192, guid: 5cdc20d2a21d9694d955d8edaeb17af7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1282470148176026192, guid: 5cdc20d2a21d9694d955d8edaeb17af7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Show
-      objectReference: {fileID: 0}
-    - target: {fileID: 1282470148176026192, guid: 5cdc20d2a21d9694d955d8edaeb17af7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: RaceUI.UIScreenManager, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 1282470148176026192, guid: 5cdc20d2a21d9694d955d8edaeb17af7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: RaceUI.UIScreen, Assembly-CSharp
-      objectReference: {fileID: 0}
     - target: {fileID: 4004156042467452707, guid: 5cdc20d2a21d9694d955d8edaeb17af7, type: 3}
       propertyPath: m_Pivot.x
       value: 1
@@ -5140,25 +5114,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4758251163186226089, guid: 5cdc20d2a21d9694d955d8edaeb17af7, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: -160
-      objectReference: {fileID: 0}
-    - target: {fileID: 4758251163186226089, guid: 5cdc20d2a21d9694d955d8edaeb17af7, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 52
-      objectReference: {fileID: 0}
     - target: {fileID: 6380966003181503405, guid: 5cdc20d2a21d9694d955d8edaeb17af7, type: 3}
       propertyPath: m_Name
       value: RaceButton
-      objectReference: {fileID: 0}
-    - target: {fileID: 7515364633780782683, guid: 5cdc20d2a21d9694d955d8edaeb17af7, type: 3}
-      propertyPath: m_FontData.m_MaxSize
-      value: 72
-      objectReference: {fileID: 0}
-    - target: {fileID: 7515364633780782683, guid: 5cdc20d2a21d9694d955d8edaeb17af7, type: 3}
-      propertyPath: m_FontData.m_FontSize
-      value: 72
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

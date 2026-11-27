@@ -35,7 +35,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: 32, y: 4}
-  m_SizeDelta: {x: 48, y: 48}
+  m_SizeDelta: {x: 90, y: 90}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &7378491668900246840
 CanvasRenderer:
@@ -197,7 +197,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5981422209319520818}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: RaceUI.UIScreenManager, Assembly-CSharp
+        m_MethodName: Show
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: RaceUI.UIScreen, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &5795591259740212590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -248,8 +260,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 36, y: 4}
-  m_SizeDelta: {x: -128, y: -8}
+  m_AnchoredPosition: {x: 52, y: 4}
+  m_SizeDelta: {x: -160, y: -8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4073381025158607088
 CanvasRenderer:
@@ -281,11 +293,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 44
+    m_FontSize: 60
     m_FontStyle: 3
     m_BestFit: 0
-    m_MinSize: 22
-    m_MaxSize: 44
+    m_MinSize: 6
+    m_MaxSize: 109
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -306,5 +318,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 7515364633780782683}
-  maxSize: 44
-  minSize: 20
+  maxSize: 60
+  minSize: 6
