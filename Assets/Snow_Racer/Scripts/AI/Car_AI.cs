@@ -321,9 +321,48 @@ namespace ALIyerEdon
 
 			// Respawn check
 			if (canRespawn)
+			{
 				Respawn_Check();
+				Flip_Check();
+			}
 
 
+		}
+
+		float flippedFor;
+
+		// Upside down / on the side for a while: put the car back on the path (the slow-speed check misses
+		// a car that keeps rocking or sliding on its roof).
+		void Flip_Check()
+		{
+			if (canReverseCheck && transform.up.y < 0.35f)
+			{
+				flippedFor += Time.fixedDeltaTime;
+				if (flippedFor >= 2.5f) { flippedFor = 0f; RespawnOnPath(); }
+			}
+			else
+				flippedFor = 0f;
+		}
+
+		/// Back on the previous waypoint facing the current one. Moves the Rigidbody (the transform alone is
+		/// overwritten on interpolated bodies) and clears its velocity.
+		public void RespawnOnPath()
+		{
+			if (waypoints == null || waypoints.Count == 0) return;
+			int target = Mathf.Clamp(currentWaypoint, 0, waypoints.Count - 1);
+			int from = (target - 1 + waypoints.Count) % waypoints.Count;
+			Vector3 pos = waypoints[from].position + Vector3.up * 0.5f;
+			Vector3 look = waypoints[target].position - pos; look.y = 0f;
+			Quaternion rot = look.sqrMagnitude > 0.01f ? Quaternion.LookRotation(look, Vector3.up) : Quaternion.Euler(0f, transform.eulerAngles.y, 0f);
+			Rigidbody body = GetComponent<Rigidbody>();
+			if (body != null)
+			{
+				body.position = pos; body.rotation = rot;
+				body.linearVelocity = Vector3.zero; body.angularVelocity = Vector3.zero;
+			}
+			transform.SetPositionAndRotation(pos, rot);
+			isReversing = false;
+			checkReversing = false;
 		}
 
 		IEnumerator Check_Reversing()
@@ -433,21 +472,7 @@ namespace ALIyerEdon
 
 			if (respawnCheck_1 && respawnCheck_2
 				&& respawnCheck_3 & respawnCheck_4)
-			{
-				try
-				{
-					//Respawn now
-					transform.position = waypoints[currentWaypoint - 1].position;
-
-					var targetPosition = waypoints[currentWaypoint].position;
-					targetPosition.y = transform.position.y;
-					transform.LookAt(targetPosition);
-				}
-				catch { }
-				isReversing = false;
-				checkReversing = false;
-
-			}
+				RespawnOnPath();
 
 			respawnCheking = false;
 			respawnCheck_1 = false;

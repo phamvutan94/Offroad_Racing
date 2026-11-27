@@ -52,6 +52,19 @@ namespace RaceUI
         /// Re-reads ownership/stats after save data changed outside the garage UI (test menu).
         public void RefreshView() => Refresh();
         public Sprite CarTitle => index < carTitles.Length ? carTitles[index] : null;
+        public TuningConfig Tuning => tuning;
+        public string NameAt(int i) => CarName(i);
+        public int PriceAt(int i) => i < carPrices.Length ? carPrices[i] : 0;
+        public Sprite TitleAt(int i) => i < carTitles.Length ? carTitles[i] : null;
+        /// Raised after the view refreshed (car switched, bought, save data changed).
+        public event System.Action Changed;
+
+        /// Shows car i in the showroom (e.g. from the featured "new car" card).
+        public void ShowCarAt(int i)
+        {
+            index = Mathf.Clamp(i, 0, carPrefabs.Length - 1);
+            ShowCar();
+        }
 
         private void Start()
         {
@@ -115,6 +128,7 @@ namespace RaceUI
             if (priceGroup != null) priceGroup.SetActive(!owned);
             if (buyButton != null) buyButton.SetActive(!owned);
             RefreshStats();
+            Changed?.Invoke();
         }
 
         private void RefreshStats()

@@ -26,7 +26,7 @@ namespace RaceUI
         [SerializeField] private float noticeTime = 1.2f;
 
         private readonly List<Vector3> line = new List<Vector3>();
-        private int nearest;
+        private int nearest, lastGood = -1;
         private float outFor, noticeUntil, fullSearchAt;
 
         private void Start() => BuildCentreline();
@@ -71,6 +71,7 @@ namespace RaceUI
             Vector3 c = line[nearest];
             float horizontal = Vector2.Distance(new Vector2(p.x, p.z), new Vector2(c.x, c.z));
             bool off = horizontal > links.TrackLimit || c.y - p.y > maxDrop;
+            if (!off) lastGood = nearest;
             outFor = off ? outFor + Time.deltaTime : 0f;
             if (outFor >= delay) { outFor = 0f; PutBack(car); }
         }
@@ -96,7 +97,10 @@ namespace RaceUI
         private void PutBack(EasyCarController car)
         {
             int n = line.Count;
-            Vector3 c = line[nearest], next = line[(nearest + 3) % n];
+            // back where the car left the track (not the geometrically nearest stretch, which may be a shortcut)
+            int at = lastGood >= 0 ? lastGood : nearest;
+            nearest = at;
+            Vector3 c = line[at], next = line[(at + 3) % n];
             Vector3 forward = Vector3.ProjectOnPlane(next - c, Vector3.up).normalized;
             if (forward.sqrMagnitude < 1e-4f) forward = car.transform.forward;
             Vector3 pos = c;

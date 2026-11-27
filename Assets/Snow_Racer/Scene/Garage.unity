@@ -4566,7 +4566,11 @@ MonoBehaviour:
   - {fileID: 2955039213994686361, guid: a28fd884f9f3f074ba2111a78193e176, type: 3}
   - {fileID: 2955039213994686361, guid: 71a3c1a7b846cab42baf173539b48837, type: 3}
   - {fileID: 2955039213994686361, guid: d14f91c0d054ac74982fe90bf1bcb18a, type: 3}
-  carPrices: e8030000ac8a0000dc050000f47e0000e803000098b70000102700002cc900006496000044c5000014500000
+  - {fileID: 2955039213994686361, guid: 91bbc387166071d4a9dcd1e11e6fcb34, type: 3}
+  - {fileID: 2955039213994686361, guid: 8f2fdc4eaaac2fc4e837cb6d26bcb7d9, type: 3}
+  - {fileID: 2955039213994686361, guid: 41e1694737000a242b2e430bd3b0f1c5, type: 3}
+  - {fileID: 2955039213994686361, guid: d9f92a00123547849abd8e970552d07c, type: 3}
+  carPrices: e8030000ac8a0000dc050000f47e0000e803000098b70000102700002cc900006496000044c5000014500000085200003c730000dc050000a08c0000
   carNames:
   - DUNE RUNNER
   - RIDGE HUNTER
@@ -4579,6 +4583,10 @@ MonoBehaviour:
   - RAT RAIDER
   - SAFARI GT
   - VOLT TITAN
+  - IRON WEDGE
+  - MIRAGE
+  - THUNDER RIG
+  - MOON FLARE
   carTitles:
   - {fileID: 21300000, guid: 9b7041718b2f9684c89655987585c2c5, type: 3}
   - {fileID: 21300000, guid: de775898dda42674e887c5b17d29b0db, type: 3}
@@ -4591,6 +4599,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 67d5dfdf0b6c0d743a8932bb381b433f, type: 3}
   - {fileID: 21300000, guid: 0e23a1ebca52aa44a8f7f566356dfe53, type: 3}
   - {fileID: 21300000, guid: c85191d8a59c40a4188ccb7783362c46, type: 3}
+  - {fileID: 21300000, guid: f6a8d58f908772645bf21121ae0c6af8, type: 3}
+  - {fileID: 21300000, guid: 8826249b95a7dd5428ac132d16d2b483, type: 3}
+  - {fileID: 21300000, guid: 4e4b95f23da8f2045b1853fb5cd5ffdb, type: 3}
+  - {fileID: 21300000, guid: 16aaf9e141f9a8d43a32c0106dfd38ae, type: 3}
   tuning: {fileID: 11400000, guid: 7772835a5600ce442b9567b6e6d52aab, type: 2}
   statEmpty: 3
   statFull: 9
@@ -5355,7 +5367,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sharedProfile: {fileID: 11400000, guid: e51b3120951853e40bd1135de6de0ea4, type: 2}
+  sharedProfile: {fileID: 11400000, guid: 4ac0ba6f2945a2e4184d19485463897f, type: 2}
   isGlobal: 1
   blendDistance: 0
   weight: 1
@@ -5629,6 +5641,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 610052653}
+    - target: {fileID: 2350133747626629799, guid: 755875f44597ca742b4a614909828f4d, type: 3}
+      propertyPath: cars
+      value: 
+      objectReference: {fileID: 741232364}
     - target: {fileID: 3132218677818121863, guid: 755875f44597ca742b4a614909828f4d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -5662,10 +5678,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4432935482989838673, guid: 755875f44597ca742b4a614909828f4d, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 610052653}
-    - target: {fileID: 4440363017157570960, guid: 755875f44597ca742b4a614909828f4d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 610052653}
@@ -11066,7 +11078,7 @@ Light:
   serializedVersion: 11
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 5
+  m_Intensity: 3.5
   m_Range: 10
   m_SpotAngle: 70
   m_InnerSpotAngle: 40

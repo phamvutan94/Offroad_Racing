@@ -800,6 +800,7 @@ GameObject:
   - component: {fileID: 2249602236175420046}
   - component: {fileID: 2404997893724963692}
   - component: {fileID: 5469078778184338596}
+  - component: {fileID: 711295225478446564}
   m_Layer: 5
   m_Name: ImageArea
   m_TagString: Untagged
@@ -820,6 +821,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 284811642006850907}
+  - {fileID: 4398957744372779867}
   m_Father: {fileID: 276810682560295005}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -865,6 +867,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 2
+--- !u!114 &711295225478446564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2320348679870012826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowMaskGraphic: 1
 --- !u!1 &2344683722513095727
 GameObject:
   m_ObjectHideFlags: 0
@@ -1039,7 +1054,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: COMING SOON
+  m_Text: NEW CAR
 --- !u!114 &5504705185835862145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1156,6 +1171,8 @@ GameObject:
   - component: {fileID: 276810682560295005}
   - component: {fileID: 4440363017157570960}
   - component: {fileID: 8067186092329745017}
+  - component: {fileID: 7221952993069798128}
+  - component: {fileID: 2350133747626629799}
   m_Layer: 5
   m_Name: FeaturedCard
   m_TagString: Untagged
@@ -1232,9 +1249,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: RaceUI.UIComingSoon, Assembly-CSharp
-        m_MethodName: Show
+      - m_Target: {fileID: 2350133747626629799}
+        m_TargetAssemblyTypeName: RaceUI.FeaturedCarCard, Assembly-CSharp
+        m_MethodName: Open
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1259,6 +1276,37 @@ MonoBehaviour:
   target: {fileID: 276810682560295005}
   pressedScale: 0.95
   duration: 0.08
+--- !u!225 &7221952993069798128
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3332362843667673264}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &2350133747626629799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3332362843667673264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81adcb43e3154e6478b85cd18ef82b96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cars: {fileID: 0}
+  candidates: 4
+  group: {fileID: 7221952993069798128}
+  carArt: {fileID: 788810727199385851}
+  silhouette: {fileID: 4443844771605106940}
+  nameLabel: {fileID: 1674337585183147838}
+  priceLabel: {fileID: 3366916736999840709}
 --- !u!1 &3483496562429884947
 GameObject:
   m_ObjectHideFlags: 0
@@ -2914,6 +2962,81 @@ MonoBehaviour:
   canvasGroup: {fileID: 2879401571323282356}
   content: {fileID: 8781616935015394332}
   fadeDuration: 0.18
+--- !u!1 &7463703342592244882
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4398957744372779867}
+  - component: {fileID: 4877086520995266322}
+  - component: {fileID: 788810727199385851}
+  m_Layer: 5
+  m_Name: CarArt
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4398957744372779867
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7463703342592244882}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2249602236175420046}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -8, y: -8}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &4877086520995266322
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7463703342592244882}
+  m_CullTransparentMesh: 1
+--- !u!114 &788810727199385851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7463703342592244882}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &7549746185296598882
 GameObject:
   m_ObjectHideFlags: 0
@@ -3430,7 +3553,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: THE HORIZON IS EXPANDING
+  m_Text: 
 --- !u!114 &3416996458908026562
 MonoBehaviour:
   m_ObjectHideFlags: 0

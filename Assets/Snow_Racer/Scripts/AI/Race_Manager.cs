@@ -71,6 +71,10 @@ namespace ALIyerEdon
         // Racer cars to spawn at the spawn points
         public GameObject[] racerPrefabs;
 
+        // AI versions of the player cars (same order as playerPrefabs). When set, every AI slot gets a random
+        // car from this pool (never the player's car, no duplicates); the slot keeps its path and racer name.
+        public GameObject[] aiCarPool;
+
         // Spawn point for each racer in order
         public Transform[] spawnPositions;
 
@@ -121,11 +125,20 @@ namespace ALIyerEdon
             carPositions = new Car_Position[racerPrefabs.Length];
             racerNames = new string[racerPrefabs.Length];
 
+            GameObject[] aiPicks = PickAiCars(PlayerPrefs.GetInt("CarID"));
+
             // Instantiate racers and prefabs
             for (int i = 0; i < racerPrefabs.Length; i++)
             {
-                GameObject racer = Instantiate(racerPrefabs[i], spawnPositions[i].position,
+                GameObject prefab = aiPicks != null && i > 0 && aiPicks[i] != null ? aiPicks[i] : racerPrefabs[i];
+                GameObject racer = Instantiate(prefab, spawnPositions[i].position,
                      spawnPositions[i].rotation) as GameObject;
+                if (prefab != racerPrefabs[i])
+                {
+                    // the slot's lane and name come from the scene's original racer
+                    racer.GetComponent<Car_AI>().pathName = racerPrefabs[i].GetComponent<Car_AI>().pathName;
+                    racer.GetComponent<Car_Position>().RacerName = racerPrefabs[i].GetComponent<Car_Position>().RacerName;
+                }
 
                 // Show or hide car position on the top of the car
                 racer.GetComponent<Car_Position>().displayPosition = false;
@@ -165,6 +178,23 @@ namespace ALIyerEdon
             canStart = true;
 
             Update_Positions_Display();
+        }
+
+        /// Random distinct AI cars for slots 1..n from aiCarPool, skipping the player's car; null when there is no pool.
+        GameObject[] PickAiCars(int playerCar)
+        {
+            if (aiCarPool == null || aiCarPool.Length == 0) return null;
+            var candidates = new List<GameObject>();
+            for (int c = 0; c < aiCarPool.Length; c++)
+                if (c != playerCar && aiCarPool[c] != null) candidates.Add(aiCarPool[c]);
+            var picks = new GameObject[racerPrefabs.Length];
+            for (int i = 1; i < picks.Length && candidates.Count > 0; i++)
+            {
+                int k = Random.Range(0, candidates.Count);
+                picks[i] = candidates[k];
+                candidates.RemoveAt(k);
+            }
+            return picks;
         }
 
         public void Update_Positions_Display()
